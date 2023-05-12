@@ -1,0 +1,120 @@
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/build_type/debug/res/layout/activity_main_debug.xml" value="0.532258064516129" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/edittext_area_cipher_text_in_bg.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/edittext_area_cipher_text_out_bg.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/ic_arobase_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/ic_arrow_double_down_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/ic_arrow_double_right_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/ic_arrow_double_up_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/ic_arrow_down_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/ic_close_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/ic_confirm_outline_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/ic_copy_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/ic_decrypt_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/ic_email_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/ic_erase_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/ic_exit_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/ic_identity_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/ic_info_dark_24_dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/ic_info_light_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/ic_key_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/ic_length_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/ic_lock_close_24dp.xml" value="0.1735" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/ic_lock_open_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/ic_paste_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/ic_phone_clear_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/ic_phone_lock_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/ic_play_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/ic_send_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/ic_send_to_mobile_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/ic_stop_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/ic_text_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/ic_three_button_h_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/ic_transform_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/ic_warning_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/option_show_background.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/recycler_divider.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/state_text_color.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/step_led_selector.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/suggest_buy_border.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/drawable/toolbar_bottom_color.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/layout/dialog_create_key.xml" value="0.15462962962962962" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/layout/dialog_edit_key.xml" value="0.22" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/layout/dialog_export_key.xml" value="0.22" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/layout/dialog_history_info.xml" value="0.18177083333333333" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/layout/dialog_ie_keys_request_export.xml" value="0.18177083333333333" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/layout/dialog_ie_keys_result.xml" value="0.1361111111111111" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/layout/dialog_import_key.xml" value="0.22" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/layout/dialog_import_key_confirm.xml" value="0.15" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/layout/dialog_menu_format.xml" value="0.18177083333333333" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/layout/dialog_qr_show.xml" value="0.18177083333333333" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/layout/fragment_cipher_file.xml" value="0.1" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/layout/fragment_cipher_text.xml" value="0.1" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/layout/fragment_info.xml" value="0.1" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/layout/icl_key_option_buttons.xml" value="0.17" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/layout/mrg_progress_bar.xml" value="0.151268115942029" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/layout/pager_tab_cipher_text_out.xml" value="0.18177083333333333" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/layout/toolbar_content.xml" value="0.15185185185185185" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/app_crypter/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_add_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_block_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_brush_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_brush_24dp_pendulum.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_buy_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_cake_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_calendar_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_camera_capture_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_camera_preview_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_cancel_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_child_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_confirm_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_delete_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_directory_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_dot3_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_edit_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_error_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_export_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_eye_dp24.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_file_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_filter_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_flare_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_flash_auto_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_flash_off_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_flash_on_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_forward_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_import_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_list_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_location_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_new_window_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_next_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_previous_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_qr_code_scan_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_qr_code_show_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_rating_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_refresh_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_search_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_setting_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_share_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_success_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_undo_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/drawables/ic/drawable/ic_user_24dp.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/layouts/dialogs/layout/dialog_modal_progress_indeterminate.xml" value="0.1" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/layouts/nav/layout/content_drawer_switch.xml" value="0.1361111111111111" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/layouts/nav/layout/tpl_activity_tbc_tbb.xml" value="0.1361111111111111" />
+        <entry key="..\:/Users/admin/Desktop/byTezovAndroid/lib_java_android/lib/src/main/res/layouts/templates/layout/tpl_frame_layout_ww.xml" value="0.18177083333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

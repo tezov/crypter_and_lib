@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<resources>
+    <declare-styleable name="attrs_lib_global_reference">
+        <attr name="previous" format="reference|enum">
+            <enum name="input" value="0" />
+            <enum name="output" value="1" />
+        </attr>
+        <attr name="next" format="reference|enum">
+            <enum name="input" value="0" />
+            <enum name="output" value="1" />
+        </attr>
+        <attr name="joint_color" format="reference" />
+        <attr name="background_color_array" format="reference" />
+        <attr name="text_color_array" format="reference" />
+        <attr name="text_array" format="reference" />
+        <attr name="title_array" format="reference" />
+        <attr name="icon_array" format="reference" />
+        <attr name="icon" format="reference" />
+        <attr name="icon_tint" format="reference" />
+        <attr name="layout_message" format="reference" />
+        <attr name="layout_request" format="reference" />
+        <attr name="layout_progress" format="reference" />
+        <attr name="color_array_failed" format="reference" />
+        <attr name="color_array_succeed" format="reference" />
+        <attr name="color_array_neutral" format="reference" />
+        <attr name="color_array_info" format="reference" />
+        <attr name="color_array_warning" format="reference" />
+        <attr name="raw_file" format="reference" />
+        <attr name="anim_in" format="reference" />
+        <attr name="anim_out" format="reference" />
+        <attr name="max_height" format="reference|integer"/>
+    </declare-styleable>
+    <declare-styleable name="attrs_lib_global_string">
+        <attr name="hint_inner" format="string" />
+        <attr name="hint_outer" format="string" />
+        <attr name="title_SINGLE" format="string" />
+        <attr name="title_SELECT" format="string" />
+        <attr name="title_ADD" format="string" />
+        <attr name="title_EDIT" format="string" />
+        <attr name="html_encoding" format="string" />
+    </declare-styleable>
+    <declare-styleable name="attrs_lib_global_boolean">
+        <attr name="expanded" format="boolean" />
+        <attr name="raw_file_load_on_create" format="boolean" />
+        <attr name="autostart" format="boolean" />
+        <attr name="auto_hide_keyboard" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="attrs_lib_global_enum">
+        <attr name="position" format="enum">
+            <enum name="top_left" value="0" />
+            <enum name="top_right" value="1" />
+            <enum name="bottom_left" value="2" />
+            <enum name="bottom_right" value="3" />
+            <enum name="option" value="4" />
+        </attr>
+        <attr name="icon_position" format="enum">
+            <enum name="start" value="0" />
+            <enum name="top" value="1" />
+            <enum name="end" value="2" />
+            <enum name="bottom" value="3" />
+        </attr>
+        <attr name="icon_mode" format="enum">
+            <enum name="none" value="0" />
+            <enum name="clear" value="1" />
+            <enum name="action" value="2" />
+            <enum name="password" value="3" />
+        </attr>
+        <attr name="scroll_position" format="enum">
+            <enum name="start" value="0" />
+            <enum name="end" value="1" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="attrs_lib_global_integer">
+        <attr name="precision" format="integer" />
+        <attr name="raw_file_load_delay_ms" format="integer" />
+        <attr name="anim_in_duration" format="integer" />
+        <attr name="anim_in_start_delay" format="integer" />
+        <attr name="anim_out_duration" format="integer" />
+        <attr name="anim_out_start_delay" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="attrs_lib_global_float">
+        <attr name="min_float" format="float" />
+        <attr name="max_float" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="TabLayout_lib">
+        <attr name="title_array" />
+        <attr name="icon_array" />
+    </declare-styleable>
+    <declare-styleable name="EditTextIconIconAction_lib">
+        <attr name="icon_mode" />
+        <attr name="icon" />
+        <attr name="icon_tint" />
+        <attr name="icon_position" />
+    </declare-styleable>
+    <declare-styleable name="EditTextForm_lib">
+        <attr name="hint_inner" />
+        <attr name="hint_outer" />
+    </declare-styleable>
+    <declare-styleable name="defFormComponent_lib">
+        <attr name="previous" />
+        <attr name="next" />
+    </declare-styleable>
+    <declare-styleable name="defFormDialogPicker_lib">
+        <attr name="title_SINGLE" />
+        <attr name="title_SELECT" />
+        <attr name="title_ADD" />
+        <attr name="title_EDIT" />
+    </declare-styleable>
+    <declare-styleable name="DialogPickerButton_lib">
+        <attr name="position" />
+        <attr name="joint_color" />
+    </declare-styleable>
+    <declare-styleable name="ButtonTextMultiState_lib">
+        <attr name="text_array" />
+        <attr name="background_color_array" />
+        <attr name="icon_array" />
+    </declare-styleable>
+    <declare-styleable name="ButtonIconMultiState_lib">
+        <attr name="text_array" />
+        <attr name="background_color_array" />
+        <attr name="icon_array" />
+    </declare-styleable>
+    <declare-styleable name="SeekBarNorm_lib">
+        <attr name="precision" />
+        <attr name="min_float" />
+        <attr name="max_float" />
+    </declare-styleable>
+
+    <declare-styleable name="StatusView_lib">
+        <attr name="layout_message" />
+        <attr name="layout_request" />
+        <attr name="layout_progress" />
+    </declare-styleable>
+    <declare-styleable name="WebViewHtmlResource_lib">
+        <attr name="raw_file" />
+        <attr name="raw_file_load_on_create" />
+        <attr name="raw_file_load_delay_ms" />
+        <attr name="html_encoding" />
+        <attr name="max_height" />
+    </declare-styleable>
+    <declare-styleable name="GlassAnimInOut_lib">
+        <attr name="anim_in" />
+        <attr name="anim_in_duration" />
+        <attr name="anim_in_start_delay" />
+        <attr name="anim_out" />
+        <attr name="anim_out_duration" />
+        <attr name="anim_out_start_delay" />
+    </declare-styleable>
+    <declare-styleable name="GlassAnimInOutAuto_lib">
+        <attr name="anim_in" />
+        <attr name="anim_in_duration" />
+        <attr name="anim_in_start_delay" />
+        <attr name="anim_out" />
+        <attr name="anim_out_duration" />
+        <attr name="anim_out_start_delay" />
+        <attr name="autostart" />
+    </declare-styleable>
+    <declare-styleable name="TextViewScrollable_lib">
+        <attr name="scroll_position" />
+    </declare-styleable>
+    <declare-styleable name="EditText_lib">
+        <attr name="scroll_position" />
+        <attr name="auto_hide_keyboard" />
+    </declare-styleable>
+</resources>

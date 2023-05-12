@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item app:state_neutral="true">
+        <shape>
+            <corners android:radius="8dp" />
+            <padding android:bottom="8dp" android:left="8dp" android:right="8dp" android:top="8dp" />
+            <stroke android:width="2dp" android:color="@color/DarkGray" />
+            <solid android:color="@color/LightGray" />
+        </shape>
+    </item>
+    <item app:state_busy="true">
+        <shape>
+            <corners android:radius="8dp" />
+            <padding android:bottom="8dp" android:left="8dp" android:right="8dp" android:top="8dp" />
+            <stroke android:width="2dp" android:color="@color/DarkOrange" />
+            <solid android:color="@color/Orange" />
+        </shape>
+    </item>
+    <item app:state_succeed="true">
+        <shape>
+            <corners android:radius="8dp" />
+            <padding android:bottom="8dp" android:left="8dp" android:right="8dp" android:top="8dp" />
+            <stroke android:width="2dp" android:color="@color/LightGreen" />
+            <solid android:color="@color/Green" />
+        </shape>
+    </item>
+    <item app:state_failed="true">
+        <shape>
+            <corners android:radius="8dp" />
+            <padding android:bottom="8dp" android:left="8dp" android:right="8dp" android:top="8dp" />
+            <stroke android:width="2dp" android:color="@color/DarkRed" />
+            <solid android:color="@color/Red" />
+        </shape>
+    </item>
+</selector>

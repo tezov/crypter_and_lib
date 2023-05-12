@@ -1,0 +1,8 @@
+
+// Test KeyAgreement, can share and retrieve key (transfert ownership or not)
+// Export / Import all keys
+// Uri media store create / retrieve name/path
+// Log in/out
+// db create item/retrieve/delete/update
+// File encode/decode
+// config encrypted read ok

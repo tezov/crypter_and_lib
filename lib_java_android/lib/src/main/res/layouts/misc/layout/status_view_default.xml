@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="?attr/layoutRootStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_status_bg">
+
+    <com.tezov.lib_java_android.ui.layout.FrameLayout
+        android:id="@+id/img_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="@dimen/dimPaddingElement_6"
+        app:layout_constraintEnd_toStartOf="@id/lbl_title"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@color/Green" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_title"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/dimPaddingElement_6"
+        android:textAppearance="?attr/styleTextBig"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/img_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/dimPaddingElement_5"
+        android:paddingTop="@dimen/dimPaddingElement_6"
+        android:paddingEnd="@dimen/dimPaddingElement_2"
+        android:textAppearance="?attr/styleTextNorm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lbl_title"
+        tools:text="Message" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="?attr/dimPaddingElement_6"
+        android:paddingBottom="?attr/dimPaddingElement_6"
+        app:layout_constraintTop_toBottomOf="@id/lbl_message">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/si_lib_no"
+            app:layout_constraintEnd_toStartOf="@+id/btn_confirm"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/si_lib_yes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_cancel" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/sep_header"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginStart="@dimen/dimPaddingElement_2"
+        android:layout_marginEnd="@dimen/dimPaddingElement_2"
+        android:background="@color/DarkGray"
+        app:layout_constraintTop_toBottomOf="@id/container_btn" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_helper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:paddingStart="@dimen/dimPaddingElement_2"
+        android:paddingTop="@dimen/dimPaddingElement_6"
+        android:paddingEnd="@dimen/dimPaddingElement_2"
+        android:textAppearance="?attr/styleTextHelper"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sep_header"
+        tools:text="Helper" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,93 @@
+plugins {
+    id 'com.android.library'
+    id 'com.tezov.application'
+}
+
+android {
+    compileSdk 32
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 32
+        renderscriptTargetApi 24
+    }
+    sourceSets {
+        def lib_anims = file('src/main/res/anims').listFiles()
+        def lib_drawables = file('src/main/res/drawables').listFiles()
+        def lib_values = file('src/main/res/values').listFiles()
+        def lib_layouts = file('src/main/res/layouts').listFiles()
+        def lib_res = [lib_anims, lib_drawables, lib_values, lib_layouts]
+        main {
+            res {
+                srcDirs lib_res
+            }
+            java {
+                srcDirs 'src/main/java'
+                filter.exclude '**/*TODO*'
+            }
+            aidl { srcDirs 'src/main/aidl' }
+            renderscript { srcDirs 'src/main/rs' }
+        }
+    }
+}
+
+dependencies {
+    api project(':lib_java')
+    api 'androidx.multidex:multidex:2.0.1'
+    api 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+
+    api 'com.google.android.material:material:1.6.1'
+    api 'androidx.appcompat:appcompat:1.4.2'
+    api 'androidx.appcompat:appcompat-resources:1.4.2'
+
+    api 'androidx.preference:preference:1.2.0'
+    api 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+
+    //FIREBASE
+    implementation 'com.google.firebase:firebase-core:21.0.0'
+    implementation 'com.google.firebase:firebase-auth:21.0.5'
+    implementation 'com.google.firebase:firebase-database:20.0.5'
+    implementation 'com.google.firebase:firebase-storage:20.0.1'
+
+    //BILLING
+    implementation 'com.android.billingclient:billing:5.0.0'
+    implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'
+    //ADMOB
+    implementation 'com.google.android.gms:play-services-ads:21.0.0'
+    //ADMAX
+    implementation 'com.applovin:applovin-sdk:11.3.1'
+    implementation 'com.applovin.mediation:google-adapter:20.6.0.3'
+    implementation 'com.applovin.mediation:facebook-adapter:6.8.0.12'
+    //MISC
+    implementation 'com.github.martin-stone:hsv-alpha-color-picker-android:3.0.1'
+    implementation 'com.h6ah4i.android.widget.verticalseekbar:verticalseekbar:1.0.0'
+    implementation 'androidx.annotation:annotation:1.3.0'
+    implementation 'com.google.zxing:core:3.4.1'
+}
+tezov {
+    configuration {
+        library = true
+        classesToImport = [
+                "com.tezov.lib_java.debug.DebugLog",
+                "com.tezov.lib_java.debug.DebugTrack",
+                "com.tezov.lib_java.debug.DebugException",
+                "com.tezov.lib_java.type.primitive.ObjectTo",
+                "com.tezov.lib_java.type.primitive.IntTo",
+                "com.tezov.lib_java.type.unit.UnitByte",
+                "com.tezov.lib_java.toolbox.CompareType",
+                "com.tezov.lib_java.toolbox.Clock",
+                "com.tezov.lib_java.util.UtilsString",
+                "java.util.List",
+                "java.util.LinkedList",
+                "java.util.Set",
+                "com.tezov.lib_java_android.database.sqlLite.filter.dbFilterOrder",
+                "com.tezov.lib_java_android.database.sqlLite.filter.chunk.ChunkCommand",
+                "androidx.fragment.app.Fragment",
+        ]
+    }
+}

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<!DOCTYPE resources [<!ENTITY duration_defaut "250"><!ENTITY duration_defaut_slow "300"><!ENTITY duration_defaut_half "125">]>
+<resources>
+    <!--transition anim-->
+    <integer name="fade_in">&duration_defaut;</integer>
+    <integer name="fade_out">&duration_defaut;</integer>
+
+    <integer name="zoom_in">&duration_defaut;</integer>
+    <integer name="zoom_out">&duration_defaut;</integer>
+
+    <integer name="slide_left_in">&duration_defaut;</integer>
+    <integer name="slide_left_out">&duration_defaut;</integer>
+    <integer name="slide_right_in">&duration_defaut;</integer>
+    <integer name="slide_right_out">&duration_defaut;</integer>
+
+    <integer name="slide_over_left_in">&duration_defaut;</integer>
+    <integer name="slide_over_left_out">&duration_defaut_slow;</integer>
+    <integer name="slide_over_right_in">&duration_defaut;</integer>
+    <integer name="slide_over_right_out">&duration_defaut_slow;</integer>
+
+
+    <integer name="slide_up_in">&duration_defaut;</integer>
+    <integer name="slide_up_out">&duration_defaut;</integer>
+    <integer name="slide_down_in">&duration_defaut;</integer>
+    <integer name="slide_down_out">&duration_defaut;</integer>
+
+    <integer name="flip_right_in">&duration_defaut;</integer>
+    <integer name="flip_right_in_half">&duration_defaut_half;</integer>
+    <integer name="flip_right_out">&duration_defaut;</integer>
+    <integer name="flip_right_out_half">&duration_defaut_half;</integer>
+
+    <integer name="flip_left_in">&duration_defaut;</integer>
+    <integer name="flip_left_in_half">&duration_defaut_half;</integer>
+    <integer name="flip_left_out">&duration_defaut;</integer>
+    <integer name="flip_left_out_half">&duration_defaut_half;</integer>
+
+    <integer name="flip_up_in">&duration_defaut;</integer>
+    <integer name="flip_up_in_half">&duration_defaut_half;</integer>
+    <integer name="flip_up_out">&duration_defaut;</integer>
+    <integer name="flip_up_out_half">&duration_defaut_half;</integer>
+
+    <integer name="flip_down_in">&duration_defaut;</integer>
+    <integer name="flip_down_in_half">&duration_defaut_half;</integer>
+    <integer name="flip_down_out">&duration_defaut;</integer>
+    <integer name="flip_down_out_half">&duration_defaut_half;</integer>
+
+    <!--divers anim-->
+    <integer name="blink">&duration_defaut;</integer>
+    <integer name="blink_half">&duration_defaut;</integer>
+    <integer name="bounce">&duration_defaut;</integer>
+    <integer name="bounce_half">&duration_defaut_half;</integer>
+    <integer name="rotate">&duration_defaut;</integer>
+    <integer name="rotate_half">&duration_defaut_half;</integer>
+
+    <!--layout anim-->
+    <integer name="slide_down">&duration_defaut;</integer>
+    <integer name="slide_left">&duration_defaut;</integer>
+    <integer name="slide_up">&duration_defaut;</integer>
+
+</resources>

@@ -1,0 +1,21 @@
+plugins {
+    id 'java-gradle-plugin'
+    id 'groovy'
+}
+gradlePlugin {
+    plugins {
+        GradlePlugin {
+            id = 'com.tezov.application'
+            implementationClass = 'PluginTezovApp'
+        }
+    }
+}
+repositories {
+    google()
+    mavenCentral()
+    maven { url "https://jitpack.io" }
+}
+dependencies {
+    implementation localGroovy()
+    implementation gradleApi()
+}

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_status_bg"
+    android:padding="?attr/dimPaddingRoot_3">
+
+    <ProgressBar
+        android:id="@+id/bar_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/progress_rotate"
+        app:layout_constraintEnd_toStartOf="@id/lbl_title"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_title"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:textAppearance="?attr/styleTextBig"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/bar_progress"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="title" />
+
+    <com.tezov.lib_java_android.ui.layout.FrameLayout
+        android:id="@+id/sep_header"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="?attr/colorAccentLight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_title"
+        app:layout_constraintWidth_percent="0.80" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_helper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:paddingStart="@dimen/dimPaddingElement_2"
+        android:paddingTop="@dimen/dimPaddingElement_6"
+        android:paddingEnd="@dimen/dimPaddingElement_2"
+        android:textAppearance="?attr/styleTextHelper"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sep_header"
+        tools:text="Helper" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

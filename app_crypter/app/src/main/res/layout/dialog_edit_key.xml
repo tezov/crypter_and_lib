@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <com.tezov.lib_java_android.ui.component.plain.FocusCemetery
+        android:layout_width="1px"
+        android:layout_height="1px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_info_key"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="?attr/dimPaddingElement_4"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_created_date_the"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_key_created_the"
+            android:textAppearance="?attr/styleTextLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_created_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dimPaddingElement_4"
+            android:textAppearance="?attr/styleTextNorm"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lbl_created_date_the"
+            app:layout_constraintStart_toEndOf="@+id/lbl_created_date_the"
+            tools:text="date" />
+
+        <com.tezov.lib_java_android.ui.component.plain.TextViewScrollable
+            android:id="@+id/lbl_signature_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/Null"
+            android:textAppearance="?attr/styleTextLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_created_date"
+            tools:text="signature key" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_is_owner_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_key_edit_am_i_owner"
+            android:textAppearance="?attr/styleTextLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_signature_key" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_is_owner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dimPaddingElement_4"
+            android:textAppearance="?attr/styleTextNorm"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lbl_is_owner_label"
+            app:layout_constraintStart_toEndOf="@+id/lbl_is_owner_label"
+            tools:text="yes" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_created_by_app_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_key_edit_created_by_app"
+            android:textAppearance="?attr/styleTextLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_is_owner_label" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_created_by_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dimPaddingElement_4"
+            android:textAppearance="?attr/styleTextNorm"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lbl_created_by_app_label"
+            app:layout_constraintStart_toEndOf="@+id/lbl_created_by_app_label"
+            tools:text="yes" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_method_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="?attr/dimPaddingElement_6"
+        app:layout_constraintTop_toBottomOf="@+id/container_info_key">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_method_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="?attr/dimPaddingElement_5"
+            android:text="@string/lbl_key_method_title"
+            android:textAppearance="?attr/styleTextLabel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_key_algo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="?attr/dimPaddingElement_6"
+            android:textAppearance="?attr/styleTextNorm"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/lbl_key_sep"
+            app:layout_constraintStart_toEndOf="@+id/lbl_method_label"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="algo" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_key_sep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textAppearance="?attr/styleTextNorm"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/lbl_key_length"
+            app:layout_constraintStart_toEndOf="@+id/lbl_key_algo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_key_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/styleTextNorm"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lbl_key_sep"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="length" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.tezov.lib_java_android.ui.component.plain.EditTextLayout
+        android:id="@+id/frm_alias_layout"
+        style="?attr/textInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="?attr/textInputTheme"
+        app:errorIconDrawable="@null"
+        app:layout_constraintTop_toBottomOf="@+id/container_method_label"
+        tools:helperText="helper text"
+        tools:hint="Alias">
+
+        <com.tezov.lib_java_android.ui.form.component.plain.FormEditText
+            android:id="@+id/frm_alias"
+            style="?attr/textInputStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:imeOptions="actionDone"
+            app:hint_inner="@string/frm_inner_alias"
+            app:hint_outer="@string/frm_outer_alias"
+            app:icon_mode="clear"
+            tools:text="alias" />
+    </com.tezov.lib_java_android.ui.component.plain.EditTextLayout>
+
+    <com.tezov.lib_java_android.ui.component.plain.CheckBox
+        android:id="@+id/chk_password_nullify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/chk_nullify_password"
+        android:textAppearance="?attr/styleTextLabelSmall"
+        app:layout_constraintTop_toBottomOf="@+id/frm_alias_layout" />
+
+    <com.tezov.lib_java_android.ui.component.plain.CheckBox
+        android:id="@+id/chk_encrypt_strict_mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:text="@string/chk_strict_mode"
+        android:textAppearance="?attr/styleTextLabelSmall"
+        app:layout_constraintTop_toBottomOf="@+id/chk_password_nullify" />
+
+    <include
+        android:id="@+id/container_option_button"
+        layout="@layout/icl_key_option_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/chk_encrypt_strict_mode" />
+
+</merge>
+

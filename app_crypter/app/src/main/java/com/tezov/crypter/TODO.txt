@@ -1,0 +1,15 @@
+/*
+
+
+- Bug toast tablet - width too long
+- Bug api 30 - status bar white sometimes?
+
+idea:
+- no ads if look 1 pub
+- auto decipher if key known
+- text as chat + file
+- vault
+- log timestamp opening app
+- encrypt and pack multiple files
+
+*/

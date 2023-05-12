@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_option_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/dimPaddingElement_5"
+        android:paddingEnd="@dimen/dimPaddingElement_5">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_option_start"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/option_show_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/sep_option"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/btn_option_end"
+            app:layout_constraintEnd_toStartOf="@+id/btn_option_end"
+            app:layout_constraintStart_toEndOf="@+id/btn_option_start"
+            app:layout_constraintTop_toTopOf="@+id/btn_option_start">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dimPaddingElement_2"
+                android:layout_marginEnd="@dimen/dimPaddingElement_2"
+                android:layout_weight="1"
+                android:background="?attr/colorAccentLight" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_sep_option"
+                android:textAppearance="?attr/styleTextLabel" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dimPaddingElement_2"
+                android:layout_marginEnd="@dimen/dimPaddingElement_2"
+                android:layout_weight="1"
+                android:background="?attr/colorAccentLight" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_option_end"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/option_show_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_option_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/container_option_button"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/sep_encrypt_file"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dimPaddingElement_2"
+                android:layout_marginEnd="@dimen/dimPaddingElement_2"
+                android:layout_weight="1"
+                android:background="?attr/colorAccentLight" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_sep_encrypt_file"
+                android:textAppearance="?attr/styleTextLabel" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dimPaddingElement_2"
+                android:layout_marginEnd="@dimen/dimPaddingElement_2"
+                android:layout_weight="1"
+                android:background="?attr/colorAccentLight" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/chk_container_encrypt_file"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sep_encrypt_file">
+
+            <com.tezov.lib_java_android.ui.component.plain.CheckBox
+                android:id="@+id/chk_encrypt_delete_file_original"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chk_encrypt_delete_original"
+                android:textAppearance="?attr/styleTextLabelSmall"
+                tools:checked="false" />
+
+            <com.tezov.lib_java_android.ui.component.plain.CheckBox
+                android:id="@+id/chk_encrypt_overwrite_file"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chk_encrypt_overwrite_file"
+                android:textAppearance="?attr/styleTextLabelSmall"
+                tools:checked="false" />
+
+            <com.tezov.lib_java_android.ui.component.plain.CheckBox
+                android:id="@+id/chk_encrypt_file_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chk_encrypt_file_name"
+                android:textAppearance="?attr/styleTextLabelSmall"
+                tools:checked="false" />
+
+            <com.tezov.lib_java_android.ui.component.plain.CheckBox
+                android:id="@+id/chk_encrypt_add_date_and_time_to_file_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chk_encrypt_add_date_time_to_file_name"
+                android:textAppearance="?attr/styleTextLabelSmall"
+                tools:checked="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sep_decrypt_file"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/chk_container_encrypt_file">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dimPaddingElement_2"
+                android:layout_marginEnd="@dimen/dimPaddingElement_2"
+                android:layout_weight="1"
+                android:background="?attr/colorAccentLight" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_sep_decrypt_file"
+                android:textAppearance="?attr/styleTextLabel" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dimPaddingElement_2"
+                android:layout_marginEnd="@dimen/dimPaddingElement_2"
+                android:layout_weight="1"
+                android:background="?attr/colorAccentLight" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/chk_container_decrypt_file"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sep_decrypt_file">
+
+            <com.tezov.lib_java_android.ui.component.plain.CheckBox
+                android:id="@+id/chk_decrypt_delete_file_encrypted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chk_decrypt_delete_encrypted"
+                android:textAppearance="?attr/styleTextLabelSmall"
+                tools:checked="false" />
+
+            <com.tezov.lib_java_android.ui.component.plain.CheckBox
+                android:id="@+id/chk_decrypt_overwrite_file"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chk_decrypt_overwrite_file"
+                android:textAppearance="?attr/styleTextLabelSmall"
+                tools:checked="false" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sep_encrypt_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/chk_container_decrypt_file">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dimPaddingElement_2"
+                android:layout_marginEnd="@dimen/dimPaddingElement_2"
+                android:layout_weight="1"
+                android:background="?attr/colorAccentLight" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_sep_encrypt_text"
+                android:textAppearance="?attr/styleTextLabel" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dimPaddingElement_2"
+                android:layout_marginEnd="@dimen/dimPaddingElement_2"
+                android:layout_weight="1"
+                android:background="?attr/colorAccentLight" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/chk_container_encrypt_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sep_encrypt_text">
+
+            <com.tezov.lib_java_android.ui.component.plain.CheckBox
+                android:id="@+id/chk_encrypt_sign_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chk_encrypt_sign_text"
+                android:textAppearance="?attr/styleTextLabelSmall"
+                tools:checked="true" />
+
+            <com.tezov.lib_java_android.ui.component.plain.CheckBox
+                android:id="@+id/chk_encrypt_add_deeplink_to_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chk_encrypt_add_deeplink_to_text"
+                android:textAppearance="?attr/styleTextLabelSmall"
+                tools:checked="true" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
+
+
+

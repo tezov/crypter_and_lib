@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="24dp"
+    android:layout_marginBottom="24dp"
+    android:overScrollMode="ifContentScrolls">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@android:id/message"
+            style="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?attr/dimPaddingElement_3"
+            android:layout_marginEnd="?attr/dimPaddingElement_3"
+            android:layout_marginBottom="?attr/dimPaddingElement_5"
+            android:textColor="?android:attr/textColorSecondary" />
+
+        <com.tezov.lib_java_android.ui.component.plain.FocusCemetery
+            android:layout_width="1px"
+            android:layout_height="1px" />
+
+        <com.tezov.lib_java_android.ui.form.component.plain.FormEditText
+            android:id="@android:id/edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?attr/dimPaddingElement_5"
+            android:layout_marginEnd="?attr/dimPaddingElement_5"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:maxLines="1"
+            app:icon_mode="clear" />
+
+    </LinearLayout>
+</ScrollView>

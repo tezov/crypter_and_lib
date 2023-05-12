@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="?attr/colorBackground" />
+            <corners
+                android:bottomLeftRadius="3dp"
+                android:bottomRightRadius="3dp"
+                android:topLeftRadius="1dp"
+                android:topRightRadius="2dp" />
+        </shape>
+    </item>
+    <item
+        android:id="@+id/shp_solid_color">
+        <shape android:shape="rectangle">
+            <solid android:color="?attr/colorFaint" />
+            <corners
+                android:bottomLeftRadius="3dp"
+                android:bottomRightRadius="3dp"
+                android:topLeftRadius="1dp"
+                android:topRightRadius="2dp" />
+        </shape>
+    </item>
+    <item android:id="@+id/shp_stroke_color">
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="3dp"
+                android:color="?attr/colorPrimaryVariant" />
+            <solid android:color="@android:color/transparent" />
+            <corners
+                android:bottomLeftRadius="3dp"
+                android:bottomRightRadius="3dp"
+                android:topLeftRadius="1dp"
+                android:topRightRadius="2dp" />
+        </shape>
+    </item>
+</layer-list>
+
+

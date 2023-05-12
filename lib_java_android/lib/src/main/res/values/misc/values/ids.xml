@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<resources>
+    <item name="container_fragment" type="id" />
+    <item name="container_frame" type="id" />
+    <item name="frame_substitute" type="id" />
+    <item name="recycler" type="id" />
+    <item name="drawer" type="id" />
+    <item name="drawer_switch" type="id" />
+    <item name="nav_view" type="id" />
+    <item name="toolbar" type="id" />
+    <item name="toolbar_collapsible" type="id" />
+    <item name="toolbar_bottom" type="id" />
+    <item name="picker" type="id" />
+</resources>

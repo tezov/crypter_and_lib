@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="?attr/layoutRootStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:theme="?attr/dialogPickerRecyclerWheelTheme">
+
+    <com.tezov.lib_java_android.ui.recycler.RecyclerListLinear
+        android:id="@id/recycler"
+        style="?attr/layoutBodyStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.tezov.lib_java_android.ui.component.plain.EditTextWithIconAction
+        android:id="@+id/txt_filter"
+        style="?attr/layoutOptionStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_search_24dp"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:maxLines="1"
+        tools:text="search text" />
+
+</LinearLayout>

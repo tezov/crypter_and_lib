@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<com.tezov.lib_java_android.ui.layout.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_modal_bg"
+    android:paddingStart="?attr/dimPaddingRoot_3"
+    android:paddingTop="?attr/dimPaddingRoot_3"
+    android:paddingEnd="?attr/dimPaddingRoot_3"
+    android:paddingBottom="?attr/dimPaddingRoot_2"
+    android:theme="?attr/textInputTheme">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_import_24dp"
+        android:drawablePadding="?attr/dimPaddingElement_6"
+        android:textAppearance="?attr/styleTextBig"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Title" />
+
+    <com.tezov.lib_java_android.ui.component.plain.ButtonIconMaterial
+        android:id="@+id/btn_close"
+        style="@style/ButtonFlatIconRound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        app:icon="@drawable/ic_close_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.tezov.lib_java_android.ui.layout.FrameLayout
+        android:id="@+id/sep_step_retrieve"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="?attr/colorAccentLight"
+        app:layout_constraintEnd_toStartOf="@+id/btn_close"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_title"
+        app:layout_constraintWidth_percent="0.80" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_alias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="?attr/dimPaddingElement_5"
+        android:textAppearance="?attr/styleTextHelper"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sep_step_retrieve"
+        android:text="@string/frm_outer_alias" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_name_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="?attr/dimPaddingElement_5"
+        android:textAppearance="?attr/styleTextNorm"
+        app:layout_constraintStart_toEndOf="@+id/lbl_alias"
+        app:layout_constraintBaseline_toBaselineOf="@+id/lbl_alias"
+        tools:text="name key" />
+
+    <com.tezov.lib_java_android.ui.component.plain.TextViewScrollable
+        android:id="@+id/lbl_signature_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/Null"
+        android:paddingStart="?attr/dimPaddingElement_5"
+        android:textAppearance="?attr/styleTextLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_alias"
+        tools:text="signature key" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_step_retrieve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="?attr/dimPaddingElement_5"
+        android:text="@string/lbl_export_key_step_retrieve"
+        android:textAppearance="?attr/styleTextNorm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_signature_key" />
+
+    <com.tezov.lib_java_android.ui.component.plain.TextViewScrollable
+        android:id="@+id/lbl_signature_app_remote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="?attr/dimPaddingElement_5"
+        android:textAppearance="?attr/styleTextLabel"
+        android:visibility="gone"
+        android:background="@color/Null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_step_retrieve"
+        tools:text="signature app"
+        tools:visibility="visible" />
+
+    <com.tezov.lib_java_android.ui.component.plain.EditTextLayout
+        android:id="@+id/frm_key_public_layout"
+        style="?attr/textInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorIconDrawable="@null"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_signature_app_remote"
+        tools:helperText="helper text"
+        tools:hint="Key Public">
+
+        <com.tezov.lib_java_android.ui.form.component.plain.FormEditText
+            android:id="@+id/frm_key_public"
+            style="?attr/textInputStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:enabled="false"
+            app:hint_inner="@string/frm_inner_public_key"
+            app:hint_outer="@string/frm_outer_public_key"
+            app:icon_mode="clear"
+            tools:text="Key Public" />
+    </com.tezov.lib_java_android.ui.component.plain.EditTextLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_button_retrieve_glass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/frm_key_public_layout">
+
+        <com.tezov.lib_java_android.ui.component.plain.ButtonIconMaterial
+            android:id="@+id/btn_paste"
+            style="@style/StyleButtonFlatIcon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:icon="@drawable/ic_paste_24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_scan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.tezov.lib_java_android.ui.component.plain.ButtonIconMaterial
+            android:id="@+id/btn_scan"
+            style="@style/StyleButtonFlatIcon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:icon="@drawable/ic_qr_code_scan_24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_select"
+            app:layout_constraintStart_toEndOf="@+id/btn_paste"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.tezov.lib_java_android.ui.component.plain.ButtonIconMaterial
+            android:id="@+id/btn_select"
+            style="@style/StyleButtonFlatIcon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:icon="@drawable/ic_dot3_24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_scan"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.tezov.lib_java_android.ui.layout.FrameLayout
+        android:id="@+id/sep_step_share"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="?attr/dimPaddingElement_2"
+        android:background="?attr/colorAccentLight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container_button_retrieve_glass"
+        app:layout_constraintWidth_percent="0.80" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_step_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="?attr/dimPaddingElement_6"
+        android:text="@string/lbl_export_key_step_share"
+        android:textAppearance="?attr/styleTextNorm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sep_step_share" />
+
+    <com.tezov.lib_java_android.ui.component.plain.TextViewScrollable
+        android:id="@+id/lbl_signature_app_local"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/Null"
+        android:paddingStart="?attr/dimPaddingElement_5"
+        android:textAppearance="?attr/styleTextLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_step_share"
+        tools:text="signature app" />
+
+    <com.tezov.lib_java_android.ui.component.plain.EditTextLayout
+        android:id="@+id/frm_key_shared_layout"
+        style="?attr/textInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorIconDrawable="@null"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_signature_app_local"
+        tools:helperText="helper text"
+        tools:hint="Key Shared">
+
+        <com.tezov.lib_java_android.ui.form.component.plain.FormEditText
+            android:id="@+id/frm_key_shared"
+            style="?attr/textInputStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:enabled="false"
+            android:focusable="false"
+            app:hint_inner="@string/frm_inner_shared_key"
+            app:hint_outer="@string/frm_outer_shared_key"
+            app:icon_mode="none"
+            tools:text="Key Shared" />
+    </com.tezov.lib_java_android.ui.component.plain.EditTextLayout>
+
+    <com.tezov.lib_java_android.ui.component.plain.CheckBox
+        android:id="@+id/chk_transfer_ownership"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/chk_transfer_ownership"
+        android:textAppearance="?attr/styleTextLabelSmall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frm_key_shared_layout"
+        tools:checked="false" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_button_share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dimPaddingElement_6"
+        app:layout_constraintTop_toBottomOf="@+id/chk_transfer_ownership">
+
+        <com.tezov.lib_java_android.ui.component.plain.ButtonIconMaterial
+            android:id="@+id/btn_copy"
+            style="@style/StyleButtonFlatIcon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:enabled="false"
+            app:icon="@drawable/ic_copy_24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_show"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.tezov.lib_java_android.ui.component.plain.ButtonIconMaterial
+            android:id="@+id/btn_show"
+            style="@style/StyleButtonFlatIcon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:enabled="false"
+            app:icon="@drawable/ic_qr_code_show_24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_share_dialog"
+            app:layout_constraintStart_toEndOf="@+id/btn_copy"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.tezov.lib_java_android.ui.component.plain.ButtonIconMaterial
+            android:id="@+id/btn_share_dialog"
+            style="@style/StyleButtonFlatIcon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:enabled="false"
+            app:icon="@drawable/ic_three_button_h_24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_share"
+            app:layout_constraintStart_toEndOf="@+id/btn_show"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.tezov.lib_java_android.ui.component.plain.ButtonIconMaterial
+            android:id="@+id/btn_share"
+            style="@style/StyleButtonFlatIcon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:enabled="false"
+            app:icon="@drawable/ic_share_24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_share_dialog"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.tezov.lib_java_android.ui.layout.ConstraintLayout>

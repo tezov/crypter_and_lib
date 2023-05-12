@@ -1,0 +1,264 @@
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<!DOCTYPE html>
+<html lang="en"
+        xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta
+                content="text/html; charset=UTF-8"
+                http-equiv="Content-Type" />
+        <link
+                href="./how_to_use.css"
+                rel="stylesheet">
+    </head>
+    <body>
+        <h3>How to use ?</h3>
+        <p>
+            <strong>
+                <u>Encrypt</u>
+            </strong>
+        </p>
+        <ul>
+            <li>select one file or write some text</li>
+            <li>select a key alias or enter a password</li>
+            <li>click
+                <b>Encrypt</b>
+                button
+            </li>
+            <li>when the encryption is done, you can share the encrypted file or the encrypted
+                text
+            </li>
+        </ul>
+        <p>
+            <strong>
+                <u>Decrypt</u>
+            </strong>
+        </p>
+        <ul>
+            <li>select one encrypted file or paste encrypted text</li>
+            <li>select a key alias or enter a password used for the encryption</li>
+            <li>click
+                <b>Decrypt</b>
+                button
+            </li>
+            <li>when the decryption is done, you can open the decrypted file or read the decrypted
+                text
+            </li>
+        </ul>
+        </br>
+        <p>
+            <strong>
+                <u>Keystore</u>
+            </strong>
+        </p>
+        <p>Instead using a disposable password each time, the user can use the
+            <b>Keystore</b>
+            in order to
+            generate keys linked to an alias.
+            Then to encrypt or to decrypt, the user just need to select an alias.
+        </p>
+        <p>The Keystore is protected by an user password. All keys generated are retained encrypted
+            in the device.
+        </p>
+        <p>By default, the password used to generate one key is not retained.
+        </p>
+        <p>If the user prefer to share its passwords instead of the keys with another device, then
+            the
+            password can be retained
+            encrypted with a non reversible encryption method. This allow one device which do not
+            own the key used to encrypt
+            to be able to decrypt only with the password used to encrypt it.
+        </p>
+        <p>In order to retain the password (non reversible encrypted), the user must uncheck
+            himself the checkbox <b>Nullify Password</b> when creating a new key.
+        </p>
+        </br>
+        <p>
+            <strong>
+                <u>Share a key</u>
+            </strong>
+        </p>
+        <p>The sharing is done with a 2 steps protocol <u><b>started by the receiver</b></u>. The receiver
+            need to send one public key to the sender. Then the sender
+            encrypt his key and send it to the receiver.
+        </p>
+        <ul>
+            <li>1-
+                <b>
+                    <u>Receiver</u>
+                </b>
+                open the
+                <b>Keystore</b>
+                (key button)
+            </li>
+            <li>2-
+                <b>
+                    <u>Receiver</u>
+                </b>
+                click on the
+                <b>action(+)</b>
+                button (top right)
+            </li>
+            <li>3-
+                <b>
+                    <u>Receiver</u>
+                </b>
+                click
+                <b>Import one shared key</b>
+                button
+            </li>
+            <li>4-
+                <b>
+                    <u>Receiver</u>
+                </b>
+                send the public key to the
+                <b>
+                    <u>Sender</u>
+                </b>
+                (with one messaging application or just show the qr code to be scanned by the
+                sender)
+            </li>
+        </ul>
+        </br>
+        <ul>
+            <li>5-
+                <b>
+                    <u>Sender</u>
+                </b>
+                open the
+                <b>Keystore</b>
+                (key button)
+            </li>
+            <li>6-
+                <b>
+                    <u>Sender</u>
+                </b>
+                slide right and click the
+                <b>share</b>
+                button of the key that you want to share
+            </li>
+            <li>7-
+                <b>
+                    <u>Sender</u>
+                </b>
+                retrieve the public key from the
+                <b>
+                    <u>Receiver</u>
+                </b>
+                (from one messaging application or just scan the qr code presented by the receiver)
+            </li>
+            <li>8-
+                <b>
+                    <u>Sender</u>
+                </b>
+                send the encrypted key to the
+                <b>
+                    <u>Receiver</u>
+                </b>
+                (with one messaging application or just show the qr code to be scanned by the
+                receiver)
+            </li>
+        </ul>
+        </br>
+        <ul>
+            <li>9-
+                <b>
+                    <u>Receiver</u>
+                </b>
+                receive the encrypted shared key from the
+                <b>
+                    <u>Sender</u>
+                </b>
+                (from one messaging application or just scan the qr code presented by the sender)
+            </li>
+            <li>10-
+                <b>
+                    <u>Receiver</u>
+                </b>
+                click on the
+                <b>Confirm</b>
+                button to confirm the import of the key
+            </li>
+        </ul>
+        <p>
+            <strong>
+                <u>Strict mode</u>
+            </strong>
+        </p>
+        <p>By default, for each encryption the salt, the iteration number, the key length and the
+            encryption algorithm are appended
+            to the encrypted data in order to rebuilt the key from the password. Therefore you can
+            decrypt the data with the password or the key
+        </p>
+        <p>The user can also activate the option <b>Strict mode</b>. With this mode, no information
+            to rebuild the key from the password
+            are appended to the encrypted data. Only the key can decrypt the data (In order to add
+            another protection level against any dictionaries attacks).
+            With this mode, it is very important that the user do a backup of his keys with
+            <b>Export all keys</b>
+            features and keep them in safe place.
+        </p>
+        <p>Lose these
+            keys and it will be impossible to decrypt your data
+        </p>
+        </br>
+        <p>
+            <strong>
+                <u>Notes</u>
+            </strong>
+        </p>
+        <p>-Encrypted files/texts will have ".cfx" or ".ctx" extension and will be in android media
+            folder
+            <b>Documents</b>
+            or inside the
+            <b>user defined Directory</b>
+        </p>
+        <p>-Each encryption is done with an AES key randomly generated from the password or the key
+            bound to an alias
+        </p>
+        <p>-Decrypted files will be in your android media folder (Pictures, Music, Movies or
+            Documents) or inside the
+            <b>user defined directory</b>
+        </p>
+        <p>-Decrypted files will have the original file name maybe with a copy number if one
+            file with this name exist already
+        </p>
+        </br>
+        <p>
+            <strong>
+                <u>How Encryption is done?</u>
+            </strong>
+        </p>
+        <p>-Encryption is done with the method chosen by user (AES_CTR, AES_CBC, AES_GCM).
+            Recommended method is AES_GCM. Other method (AES_CTR, AES_CBC) are also secure enough
+            and little bit faster
+        </p>
+        <p>-Each Secret key is derived from password with PBKDF2WithHmacSHA1 algorithm</p>
+        <p>-Each Secret key length is chosen by user (128, 192, 256).
+            Recommended length are 256 even if (128, 192) are as much secure
+        </p>
+        <p>-Each iteration count and salt are randomly generated for each new Secret key with the
+            algorithm SHA1PRNG
+        </p>
+        <p>-Encrypted data are signed with HmacSHA256 algorithm</p>
+        <p>-For each encryption a new randomly IV generated with the algorithm SHA1PRNG is used</p>
+        <p>-For each Signature a new randomly IV generated with the algorithm SHA1PRNG is used along
+            the tag
+        </p>
+        <p>-Only for the encryption of text, the user can chose an encryption without signing and
+            authentication in order to reduce the length of the message. It is also secure enough,
+            but we recommend
+            to let the signing and authentication. If the message length is a problem for you,
+            just share your encrypted text as file.
+        </p>
+        <p>-Sharing a key with is done with a pair of asymmetric keys generated on both device then
+            send with ECDH protocol
+        </p>
+    </body>
+</html>

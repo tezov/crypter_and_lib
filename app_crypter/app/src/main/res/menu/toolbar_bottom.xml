@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/tpl_activity_d_tbc_tbb_overlap">
+
+    <item
+        android:id="@+id/mn_cipher_file"
+        android:icon="@drawable/ic_file_24dp"
+        android:title="@string/mn_cipher_file_title" />
+    <item
+        android:id="@+id/mn_cipher_text"
+        android:icon="@drawable/ic_edit_24dp"
+        android:title="@string/mn_cipher_text_title" />
+    <item
+        android:id="@+id/mn_info"
+        android:icon="@drawable/ic_info_dark_24_dp"
+        android:title="@string/mn_info_title" />
+
+</menu>
+

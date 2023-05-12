@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="?attr/layoutRootStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:theme="?attr/dialogPickerStringUnitTheme">
+
+    <com.tezov.lib_java_android.ui.component.plain.EditTextWithIconAction
+        android:id="@+id/edit_text"
+        style="?attr/layoutContentStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_edit_24dp"
+        android:paddingEnd="?attr/dimPaddingElement_4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/container_unit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@color/Transparent"
+        tools:text="text" />
+
+    <LinearLayout
+        android:id="@+id/container_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/edit_text"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:id="@+id/btn_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            tools:background="@drawable/dialog_picker_arrow_line"
+            tools:backgroundTint="?attr/colorAccent" />
+
+        <com.tezov.lib_java_android.ui.recycler.RecyclerListLinear
+            android:id="@id/recycler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_height="40dp"
+            tools:layout_width="120dp" />
+
+        <FrameLayout
+            android:id="@+id/btn_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:rotation="180"
+            tools:background="@drawable/dialog_picker_arrow_line"
+            tools:backgroundTint="?attr/colorAccent" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

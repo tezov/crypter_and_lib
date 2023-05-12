@@ -1,0 +1,12 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+    }
+}
+rootProject.name = "lib_android_java"
+include ':lib', ':lib_java'
+includeBuild '../plugin_TezovApp'
+project(':lib_java').projectDir = new File(settingsDir, '../lib_java/lib')

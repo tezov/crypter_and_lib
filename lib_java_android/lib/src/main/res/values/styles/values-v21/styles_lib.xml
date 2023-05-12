@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<resources>
+
+    <style name="ThemeNoActionBarLight.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <!-- COMPONENTS -->
+    <style name="StyleButtonFlatText" parent="Widget.AppCompat.Button.Borderless.Colored">
+        <item name="android:textAppearance">?attr/styleTextButton</item>
+        <item name="android:background">@drawable/button_border</item>
+        <item name="android:textColor">?attr/colorText</item>
+    </style>
+
+</resources>

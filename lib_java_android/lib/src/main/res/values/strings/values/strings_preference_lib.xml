@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<resources>
+    <array name="btn_file_pick_img">
+        <item>@drawable/ic_dot3_24dp</item>
+        <item>@drawable/ic_file_24dp</item>
+    </array>
+</resources>

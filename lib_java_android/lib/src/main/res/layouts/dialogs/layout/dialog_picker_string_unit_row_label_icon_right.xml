@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<com.tezov.lib_java_android.ui.layout.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="?attr/layoutElementStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal|center_vertical"
+    android:orientation="horizontal"
+    android:padding="?attr/dimPaddingElement_6"
+    android:theme="?attr/dialogPickerStringUnitTheme">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_label"
+        style="?attr/layoutAlternateStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="end"
+        tools:text="€" />
+
+    <ImageView
+        android:id="@+id/img_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_vertical"
+        tools:src="@drawable/flag_eur" />
+
+</com.tezov.lib_java_android.ui.layout.LinearLayout>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorBackground">
+
+    <LinearLayout
+        android:id="@+id/container_info"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btn_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_info_light_24dp"
+            tools:layout_height="24dp"
+            tools:layout_width="24dp" />
+
+        <com.tezov.crypter.view.LedState
+            android:id="@+id/led_result"
+            android:layout_width="@dimen/stp_width"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/step_led_selector"
+            tools:background="@color/LightGray" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_file_in"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="?attr/dimPaddingElement_6"
+        app:layout_constraintBottom_toTopOf="@+id/container_file_out"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/container_info"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.tezov.lib_java_android.ui.component.plain.ButtonMultiIconMaterial
+            android:id="@+id/ic_file_in"
+            style="@style/StyleButtonFlatIconTranslucide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:visibility="gone"
+            app:iconSize="28dp"
+            app:icon_array="@array/ic_lock_img"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@drawable/button_border"
+            tools:layout_height="28dp"
+            tools:layout_width="28dp"
+            tools:visibility="visible" />
+
+        <com.tezov.lib_java_android.ui.component.plain.TextViewScrollable
+            android:id="@+id/lbl_file_name_in"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/Null"
+            android:hint="@string/lbl_file_name"
+            android:maxLines="1"
+            android:paddingEnd="@dimen/dimPaddingElement_6"
+            android:textAppearance="?attr/styleTextNorm"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_file_in"
+            app:layout_constraintStart_toEndOf="@+id/ic_file_in"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@color/LightBlue" />
+
+        <com.tezov.lib_java_android.ui.component.plain.ButtonMultiIconMaterial
+            android:id="@+id/btn_file_in"
+            style="@style/StyleButtonFlatIconTranslucide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:visibility="invisible"
+            app:icon_array="@array/btn_intent_img"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@drawable/button_border"
+            tools:layout_height="36dp"
+            tools:layout_width="36dp"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_file_out"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/container_operation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/container_info"
+        app:layout_constraintTop_toBottomOf="@+id/container_file_in">
+
+        <com.tezov.lib_java_android.ui.component.plain.ButtonMultiIconMaterial
+            android:id="@+id/ic_file_out"
+            style="@style/StyleButtonFlatIconTranslucide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:visibility="gone"
+            app:iconSize="28dp"
+            app:icon_array="@array/ic_lock_img"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@drawable/button_border"
+            tools:layout_height="28dp"
+            tools:layout_width="28dp"
+            tools:visibility="visible" />
+
+        <com.tezov.lib_java_android.ui.component.plain.TextViewScrollable
+            android:id="@+id/lbl_file_name_out"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/Null"
+            android:hint="@string/lbl_file_name"
+            android:maxLines="1"
+            android:paddingEnd="@dimen/dimPaddingElement_6"
+            android:textAppearance="?attr/styleTextNorm"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_file_out"
+            app:layout_constraintStart_toEndOf="@+id/ic_file_out"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@color/LightBlue" />
+
+        <com.tezov.lib_java_android.ui.component.plain.ButtonMultiIconMaterial
+            android:id="@+id/btn_file_out"
+            style="@style/StyleButtonFlatIconTranslucide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:visibility="invisible"
+            app:icon_array="@array/btn_intent_img"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@drawable/button_border"
+            tools:layout_height="36dp"
+            tools:layout_width="36dp"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_operation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/container_info"
+        app:layout_constraintTop_toBottomOf="@+id/container_file_out">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_operation"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAppearance="@style/TxtHelper"
+            android:textColor="@color/Black"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Operation" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_created_date"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="end"
+            android:paddingStart="?attr/dimPaddingElement_6"
+            android:paddingBottom="?attr/dimPaddingElement_6"
+            android:textAppearance="@style/TxtHelper"
+            android:textColor="@color/Black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lbl_operation"
+            tools:text="2066/15 a 17h14" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<resources>
+    <!--    TEXT-->
+    <declare-styleable name="Theme_DimPadding_lib">
+        <attr name="dimPaddingRoot_1" format="reference" />
+        <attr name="dimPaddingRoot_2" format="reference" />
+        <attr name="dimPaddingRoot_3" format="reference" />
+        <attr name="dimPaddingRoot_4" format="reference" />
+
+        <attr name="dimPaddingElement_1" format="reference" />
+        <attr name="dimPaddingElement_2" format="reference" />
+        <attr name="dimPaddingElement_3" format="reference" />
+        <attr name="dimPaddingElement_4" format="reference" />
+        <attr name="dimPaddingElement_5" format="reference" />
+        <attr name="dimPaddingElement_6" format="reference" />
+
+        <attr name="dimPaddingImage_1" format="reference" />
+        <attr name="dimPaddingImage_2" format="reference" />
+        <attr name="dimPaddingImage_3" format="reference" />
+
+        <attr name="dimPaddingTabulation_1" format="reference" />
+        <attr name="dimPaddingTabulation_2" format="reference" />
+        <attr name="dimPaddingTabulation_3" format="reference" />
+        <attr name="dimPaddingTabulation_4" format="reference" />
+        <attr name="dimPaddingTabulation_5" format="reference" />
+        <attr name="dimPaddingTabulation_6" format="reference" />
+
+    </declare-styleable>
+    <declare-styleable name="Theme_DimSize_lib">
+        <attr name="dimBorder_1" format="reference" />
+        <attr name="dimBorder_2" format="reference" />
+        <attr name="dimBorder_3" format="reference" />
+        <attr name="dimBorder_4" format="reference" />
+        <attr name="dimBorder_5" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="Theme_DimElevation_lib">
+        <attr name="dimElevation_1" format="reference" />
+        <attr name="dimElevation_2" format="reference" />
+        <attr name="dimElevation_3" format="reference" />
+        <attr name="dimElevation_4" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="Theme_DimCorner_lib">
+        <attr name="dimCorner_1" format="reference" />
+        <attr name="dimCorner_2" format="reference" />
+        <attr name="dimCorner_3" format="reference" />
+    </declare-styleable>
+
+    <!--    Theme_DimPadding_lib-->
+    <dimen name="dimPaddingRoot_1">18dp</dimen>
+    <dimen name="dimPaddingRoot_2">12dp</dimen>
+    <dimen name="dimPaddingRoot_3">6dp</dimen>
+    <dimen name="dimPaddingRoot_4">2dp</dimen>
+
+    <dimen name="dimPaddingElement_1">24dp</dimen>
+    <dimen name="dimPaddingElement_2">16dp</dimen>
+    <dimen name="dimPaddingElement_3">12dp</dimen>
+    <dimen name="dimPaddingElement_4">8dp</dimen>
+    <dimen name="dimPaddingElement_5">6dp</dimen>
+    <dimen name="dimPaddingElement_6">4dp</dimen>
+
+    <dimen name="dimPaddingImage_1">16dp</dimen>
+    <dimen name="dimPaddingImage_2">10dp</dimen>
+    <dimen name="dimPaddingImage_3">4dp</dimen>
+
+    <dimen name="dimPaddingTabulation_1">28dp</dimen>
+    <dimen name="dimPaddingTabulation_2">22dp</dimen>
+    <dimen name="dimPaddingTabulation_3">16dp</dimen>
+    <dimen name="dimPaddingTabulation_4">12dp</dimen>
+    <dimen name="dimPaddingTabulation_5">8dp</dimen>
+    <dimen name="dimPaddingTabulation_6">4dp</dimen>
+
+    <!--    Theme_DimElevation_lib-->
+    <dimen name="dimElevation_1">12dp</dimen>
+    <dimen name="dimElevation_2">8dp</dimen>
+    <dimen name="dimElevation_3">6dp</dimen>
+    <dimen name="dimElevation_4">4dp</dimen>
+
+    <!--    Theme_DimCorner_lib-->
+    <dimen name="dimCorner_1">12dp</dimen>
+    <dimen name="dimCorner_2">8dp</dimen>
+    <dimen name="dimCorner_3">4dp</dimen>
+
+    <!--    Theme_DimSize_lib-->
+    <dimen name="dimBorder_1">10dp</dimen>
+    <dimen name="dimBorder_2">8dp</dimen>
+    <dimen name="dimBorder_3">6dp</dimen>
+    <dimen name="dimBorder_4">4dp</dimen>
+    <dimen name="dimBorder_5">2dp</dimen>
+
+    <!--    Theme_DimText_lib-->
+    <dimen name="dimText_giant">26sp</dimen>
+    <dimen name="dimText_big">23sp</dimen>
+    <dimen name="dimText_norm">20sp</dimen>
+    <dimen name="dimText_label">18sp</dimen>
+    <dimen name="dimText_helper">16sp</dimen>
+    <dimen name="dimText_small">14sp</dimen>
+    <dimen name="dimText_button">22sp</dimen>
+    <dimen name="dimText_min_auto">14sp</dimen>
+    <dimen name="dimText_max_auto">24sp</dimen>
+
+</resources>

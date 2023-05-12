@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<resources>
+    <string name="app_email" translatable="false">tezov.app@gmail.com</string>
+
+    <string name="shr_encrypted_text">cipher_text</string>
+    <string name="shr_public_key">public_key</string>
+    <string name="shr_encrypted_key">shared_key</string>
+
+    <string name="activity_privacy_policy_title">Privacy policy</string>
+    <string name="activity_preference_policy_title">Preferences</string>
+    <string name="frg_info_title">Info</string>
+    <string name="frg_cipher_file_title">Cipher file</string>
+    <string name="frg_cipher_text_title">Cipher text</string>
+
+    <string name="lbl_processing">processing…</string>
+
+    <string name="mn_info_title">Info</string>
+    <string name="mn_cipher_text_title">Text</string>
+    <string name="mn_cipher_file_title">File</string>
+
+    <string name="pref_contact">Contact</string>
+    <string name="pref_privacy_policy">Privacy policy</string>
+
+    <string name="mn_privacy_policy">Privacy policy</string>
+    <string name="mn_setting">Settings</string>
+    <string name="mn_keystore_close">Close keystore</string>
+    <string name="mn_keystore_delete">Delete keystore</string>
+    <string name="mn_history_file_delete">Delete history files</string>
+
+    <string name="pref_category_default_encryption">Default encryption</string>
+    <string name="pref_category_files_encryption">Default files encryption</string>
+    <string name="pref_category_files_decryption">Default files decryption</string>
+    <string name="pref_category_texts_encryption">Default texts encryption</string>
+    <string name="pref_category_miscellaneous">Miscellaneous</string>
+
+    <string name="pref_destination_directory_title">Destination directory</string>
+    <string name="pref_destination_directory_android_summary">output files will be placed in one of android media directories (Documents, Pictures, Movies or Music) depending of the file extension</string>
+    <string name="pref_destination_directory_summary">output files will be placed in the directory %s</string>
+
+    <string name="pref_sku_no_ads_buy_full_version_title">Buy no ads version?</string>
+    <string name="pref_sku_no_ads_buy_full_version_summary">show that you like this application, support me</string>
+
+    <string name="pref_sku_no_ads_owned_title">No ads version unlocked</string>
+    <string name="pref_sku_no_ads_owned_summary">thanks for your support</string>
+
+    <string name="pref_app_version_title">Application version</string>
+    <string name="pref_app_rating_title">Give a review?</string>
+    <string name="pref_app_rating_summary">leave us your review and let other users how you feel about this application</string>
+    <string name="pref_app_share_title">Share application</string>
+    <string name="pref_app_share_summary">share application with a friend? send a direct link to download this application</string>
+
+    <string name="pref_encrypt_share_subject_title">Email subject Prefix</string>
+    <string name="pref_encrypt_share_subject_prefix_summary">"%s" is prefixed to subject when encrypted file is shared by email</string>
+    <string name="pref_encrypt_share_subject_prefix_summary_none">nothing is prefixed to subject when encrypted file is shared by email</string>
+
+    <string name="pref_keystore_auto_close_delay_title">Keystore auto-close delay</string>
+    <string name="pref_keystore_auto_close_delay_title_dialog">Auto-close delay(minutes)</string>
+    <string name="pref_keystore_auto_close_delay_summary">delay of %d minutes before closing the keystore when the application is not visible (null to disable)</string>
+    <string name="pref_keystore_auto_close_delay_disabled_summary">delay before closing the keystore when the application is not visible (disabled)</string>
+
+    <string name="pref_keystore_keep_open_title">Keep Keystore open</string>
+    <string name="pref_keystore_keep_open_summary">keystore stay open or reopen automatically when needed</string>
+
+    <string name="pref_keystore_keep_open_delay_title">Keep Keystore open max time</string>
+    <string name="pref_keystore_keep_open_delay_title_dialog">Keep open max time(days)</string>
+    <string name="pref_keystore_keep_open_delay_summary">after %d days of inactivity, the keystore do not reopen automatically (null to disable)</string>
+    <string name="pref_keystore_keep_open_delay_disabled_summary">after x days of inactivity, the keystore do not reopen automatically (disabled)</string>
+
+    <string name="pref_alias_forget_title">Forget memorized alias</string>
+    <string name="pref_alias_forget_summary">forget memorized alias when keystore is closed.</string>
+
+    <string name="pref_alias_load_title">Load memorized alias</string>
+    <string name="pref_alias_load_summary">load memorized alias when application is starting.</string>
+
+    <string name="pref_history_delete_on_close_title">Delete history on close</string>
+    <string name="pref_history_delete_on_close_summary">delete history each time application close</string>
+
+    <string name="pref_encrypt_key_transformation_title">Cipher transformation</string>
+    <string name="pref_encrypt_key_transformation_summary">method %s is used by default to encrypt</string>
+
+    <string name="pref_encrypt_key_length_title">Key length</string>
+    <string name="pref_encrypt_key_length_summary">%sbits key length is generated by default</string>
+
+    <string name="pref_encrypt_strict_mode_title">Strict mode</string>
+    <string name="pref_encrypt_strict_mode_summary">the decryption can only be done with the key. Lose the key and the decryption will be impossible.</string>
+
+    <string name="pref_encrypt_overwrite_file_title">Overwrite encrypted</string>
+    <string name="pref_encrypt_overwrite_file_summary">when encrypt file, if on file with same name exist in destination, it will be overwritten</string>
+
+    <string name="pref_encrypt_file_name_title">Encrypt name</string>
+    <string name="pref_encrypt_file_name_summary">when encrypt file, the file name will be encrypted too</string>
+
+    <string name="pref_encrypt_add_time_and_date_to_file_name_title">Name append time and date</string>
+    <string name="pref_encrypt_add_time_and_date_to_file_name_summary">when encrypt file, data and time wil be append to file the name</string>
+
+    <string name="pref_encrypt_delete_file_original_title">Delete original file</string>
+    <string name="pref_encrypt_delete_file_original_summary">when encrypt file, the original file will be deleted at completion (if supported by device)</string>
+
+    <string name="pref_decrypt_overwrite_file_title">Overwrite decrypted</string>
+    <string name="pref_decrypt_overwrite_file_summary">when decrypt file, if on file with same name exist in destination, it will be overwritten</string>
+
+    <string name="pref_decrypt_delete_file_title">Delete encrypted file</string>
+    <string name="pref_decrypt_delete_file_summary">when decrypt file, the encrypted file will be deleted at completion (if supported by device)</string>
+
+    <string name="pref_encrypt_sign_text_title">Sign encryption</string>
+    <string name="pref_encrypt_sign_text_summary">when encrypt text, the encryption is signed and authenticated</string>
+
+    <string name="pref_encrypt_add_deeplink_to_text_title">Prefix with link</string>
+    <string name="pref_encrypt_add_deeplink_to_text_summary">when encrypt text, prefix the text with an application link when text is copied or shared</string>
+
+    <string name="chk_encrypt_file_name">encrypt file name</string>
+    <string name="chk_encrypt_add_date_time_to_file_name">add date to file name</string>
+    <string name="chk_decrypt_overwrite_file">overwrite decrypted file</string>
+    <string name="chk_encrypt_overwrite_file">overwrite encrypted file</string>
+    <string name="chk_encrypt_delete_original">delete original file</string>
+    <string name="chk_decrypt_delete_encrypted">delete encrypted file</string>
+    <string name="chk_transfer_ownership">transfer of ownership</string>
+    <string name="chk_encrypt_sign_text">sign and authenticate encryption</string>
+    <string name="chk_encrypt_add_deeplink_to_text">prefix with application link</string>
+
+    <string name="frm_outer_file_name_select">File name</string>
+    <string name="frm_inner_file_name_select">select file</string>
+
+    <string name="lbl_folder_name">folder name</string>
+    <string name="lbl_file_name">file name</string>
+
+    <string name="transfer_max" translatable="false">100</string>
+    <string name="transfer_unit" translatable="false">%</string>
+    <string name="transfer_sep" translatable="false">/</string>
+
+    <string name="lbl_result_progress_not_started">…</string>
+    <string name="lbl_result_progressing">progressing…</string>
+    <string name="lbl_result_progress_done">done</string>
+    <string name="lbl_result_progress_failed">failed</string>
+
+    <string name="sep_progress">progress</string>
+
+    <string name="frm_outer_crypt_password">Password</string>
+    <string name="frm_inner_crypt_password">password</string>
+
+    <string name="frm_outer_alias">Alias</string>
+    <string name="frm_inner_alias">alias</string>
+
+    <string name="frm_outer_public_key">Public key</string>
+    <string name="frm_inner_public_key">public key</string>
+
+    <string name="frm_outer_shared_key">Shared key</string>
+    <string name="frm_inner_shared_key">shared key</string>
+
+    <string name="chk_nullify_password">Nullify password, only generated key is retained.</string>
+    <string name="chk_strict_mode">Strict mode, only the key can decrypt.</string>
+    <string name="lbl_no_keys">No keys to show</string>
+    <string name="lbl_final_deletion_confirmation_description">Are you sure? Deletion is final, no recovery is possible</string>
+    <string name="lbl_keystore_delete_title">Delete keystore</string>
+    <string name="lbl_clear_history_file_title">Clear history files</string>
+    <string name="lbl_missing_file_title">Missing file</string>
+
+    <string name="lbl_open_keystore_title">Open keystore</string>
+    <string name="lbl_create_keystore_title">Create keystore</string>
+    <string name="lbl_share_key_title">Share key</string>
+    <string name="lbl_create_key_title">Create key</string>
+    <string name="lbl_edit_key_title">Edit key</string>
+    <string name="lbl_import_key_title">Import key</string>
+    <string name="lbl_select_key_title">Select key</string>
+    <string name="lbl_select_key_to_share_title">Select key to share</string>
+
+    <string name="lbl_share_title">Share</string>
+    <string name="lbl_scan_title">Scan</string>
+    <string name="lbl_type_encrypted_key">Encrypted key</string>
+    <string name="lbl_type_public_key">Public key</string>
+    <string name="lbl_type_encrypted_text">Encrypted text</string>
+
+    <string name="lbl_import_key_step_share">1-Share public key</string>
+    <string name="lbl_import_key_step_retrieve">2-Retrieve encrypted key</string>
+    <string name="lbl_export_key_step_share">2-Share encrypted key</string>
+    <string name="lbl_export_key_step_retrieve">1-Retrieve public key</string>
+
+    <string name="lbl_import_key_confirm_success">- Decrypt key success</string>
+    <string name="lbl_import_key_confirm_rename">- Rename key if needed</string>
+
+    <string name="lbl_operation_encrypt">encryption</string>
+    <string name="lbl_operation_decrypt">decryption</string>
+    <string name="lbl_result_succeed">succeed</string>
+    <string name="lbl_result_failed">failed</string>
+    <string name="lbl_result_aborted">aborted</string>
+
+    <string name="lbl_sep_encrypt_file">file encryption</string>
+    <string name="lbl_sep_decrypt_file">file decryption</string>
+    <string name="lbl_sep_encrypt_text">text encryption</string>
+    <string name="lbl_sep_option">option</string>
+    <string name="lbl_sep_warning">warning</string>
+
+    <string name="btn_confirm">Confirm</string>
+    <string name="btn_import">Import</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_import_key_shared">Import one shared key</string>
+    <string name="btn_export_key_all">Export all keys</string>
+    <string name="btn_import_key_all">Import all keys</string>
+    <string name="btn_create_key">Create key</string>
+
+    <string name="lbl_key_owned">keys owned:</string>
+    <string name="lbl_key_owned_not">keys not owned:</string>
+    <string name="lbl_key_owned_not_warning">keys for which you are not the owner can only be restored on the same device.
+        They won\'t be restored on another device. You will need to request the owners another copy for your new device.</string>
+
+    <string name="btn_ie_menu_format_file_text">File text</string>
+    <string name="btn_ie_menu_format_file_gif">File gif</string>
+    <string name="btn_ie_menu_format_text">Text</string>
+    <string name="lbl_ie_menu_format_title">Share with format?</string>
+    <string name="chk_remember_my_choice">remember my choice</string>
+
+    <string name="share_encrypt_subject">encrypted file&#160;</string>
+    <string name="share_encrypt_link">\n\n\nApplication link:&#160;</string>
+
+    <string name="btn_file_cipher_abort_txt">Abort</string>
+    <array name="btn_file_encrypt_start_txt">
+        <item>Encrypt</item>
+        <item>Encrypted</item>
+        <item>Encrypt failed</item>
+        <item>Encrypt aborted</item>
+    </array>
+    <array name="btn_file_decrypt_start_txt">
+        <item>Decrypt</item>
+        <item>Decrypted</item>
+        <item>Decrypt failed</item>
+        <item>Decrypt aborted</item>
+    </array>
+    <array name="btn_cipher_start_img">
+        <item>@drawable/ic_confirm_24dp</item>
+        <item>@drawable/ic_success_24dp</item>
+        <item>@drawable/ic_error_24dp</item>
+        <item>@drawable/ic_error_24dp</item>
+    </array>
+
+    <array name="btn_flash_img">
+        <item>@drawable/ic_flash_off_24dp</item>
+        <item>@drawable/ic_flare_24dp</item>
+    </array>
+
+    <array name="btn_intent_img">
+        <item>@drawable/ic_warning_24dp</item>
+        <item>@drawable/ic_share_24dp</item>
+        <item>@drawable/ic_new_window_24dp</item>
+    </array>
+    <array name="ic_lock_img">
+        <item>@drawable/ic_lock_open_24dp</item>
+        <item>@drawable/ic_lock_close_24dp</item>
+    </array>
+
+    <string name="lbl_banner_default">Buy the no ads version ;)</string>
+    <string name="btn_maybe_later">Maybe Later</string>
+    <string name="btn_buy">Buy</string>
+    <string name="btn_close">Close</string>
+    <string name="chk_do_not_show_again">do not show again</string>
+    <string name="btn_ok">Ok</string>
+    <string name="chk_already_done">already done</string>
+
+    <string name="lbl_billing_error">failed to complete purchase</string>
+
+    <string name="validator_credential_wrong">wrong credential</string>
+    <string name="validator_keystore_locked">keystore is locked</string>
+
+    <string name="validator_export_key_public_invalid">key invalid</string>
+    <string name="validator_export_key_shared_not_owner">not owner of key</string>
+    <string name="validator_export_key_shared_fail_to_encrypt">fail to encrypt key</string>
+
+    <string name="validator_import_key_shared_retrieve_key_agreement_failed">shared key expired</string>
+    <string name="validator_import_key_shared_verify_failed">failed to decrypt key</string>
+    <string name="validator_import_key_shared_already_exist">this key already exist</string>
+
+    <string name="lbl_password_keystore">Keystore password</string>
+    <string name="lbl_password_exported_keys">Exported keys password</string>
+
+    <string name="recycler_swipe_delete">Delete</string>
+    <string name="lbl_key_created_the">Created the:</string>
+    <string name="lbl_key_edit_am_i_owner">Owner:</string>
+    <string name="lbl_key_import_am_i_owner">Ownership granted:</string>
+    <string name="lbl_key_edit_created_by_app">Created by this app:</string>
+    <string name="lbl_key_edit_yes">yes</string>
+    <string name="lbl_key_edit_no">no</string>
+    <string name="lbl_key_encrypted_the">Encrypted the:</string>
+    <string name="lbl_key_method_title">Method:</string>
+    <string-array name="encrypt_key_transformation">
+        <item>AES_CTR_NO_PAD</item>
+        <item>AES_CBC_PKCS5</item>
+        <item>AES_GCM_NO_PAD</item>
+    </string-array>
+    <string-array name="encrypt_key_length">
+        <item>128</item>
+        <item>192</item>
+        <item>256</item>
+    </string-array>
+
+    <string name="lbl_export_keys_title">Export all keys</string>
+    <string name="lbl_import_keys_title">Import all keys</string>
+    <string name="lbl_exception_create_file">failed to create file</string>
+    <string name="lbl_exception_export_keys">failed to export keys</string>
+    <string name="lbl_exception_import_keys">failed to import keys</string>
+
+    <string-array name="db_export_column_name">
+        <item>index</item>
+        <item>alias</item>
+        <item>id</item>
+        <item>created</item>
+        <item>password</item>
+        <item>key</item>
+    </string-array>
+
+    <array name="uc_tab_title">
+        <item>In</item>
+        <item>Out</item>
+    </array>
+    <array name="uc_tab_icon">
+        <item>@drawable/ic_text_24dp</item>
+        <item>@drawable/ic_send_24dp</item>
+    </array>
+    <array name="btn_erase_icon">
+        <item>@drawable/ic_erase_24dp</item>
+        <item>@drawable/ic_undo_24dp</item>
+    </array>
+    <array name="btn_paste_icon">
+        <item>@drawable/ic_paste_24dp</item>
+        <item>@drawable/ic_undo_24dp</item>
+    </array>
+
+</resources>

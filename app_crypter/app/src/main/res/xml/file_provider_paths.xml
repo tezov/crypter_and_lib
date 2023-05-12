@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<paths>
+    <external-path
+        name="Pictures"
+        path="Pictures" />
+    <external-path
+        name="Movies"
+        path="Movies" />
+    <external-path
+        name="Documents"
+        path="Documents" />
+    <external-path
+        name="Music"
+        path="Music" />
+    <cache-path
+        name="key_share_public"
+        path="provider/key_share/public/" />
+    <cache-path
+        name="key_share_encrypted"
+        path="provider/key_share/encrypted/" />
+    <cache-path
+        name="cipher_text"
+        path="provider/cipher_text/" />
+</paths>

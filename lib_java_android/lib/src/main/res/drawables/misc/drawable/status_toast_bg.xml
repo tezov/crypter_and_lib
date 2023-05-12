@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="?attr/colorBackground" />
+            <corners android:radius="60dp" />
+        </shape>
+    </item>
+    <item android:id="@+id/shp_solid_color">
+        <shape android:shape="rectangle">
+            <solid android:color="?attr/colorFaint" />
+            <corners android:radius="60dp" />
+        </shape>
+    </item>
+    <item android:id="@+id/shp_stroke_color">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+            <corners android:radius="60dp" />
+            <stroke
+                android:width="2dp"
+                android:color="?attr/colorPrimary" />
+        </shape>
+    </item>
+</layer-list>

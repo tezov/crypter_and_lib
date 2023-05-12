@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_modal_bg"
+    android:paddingStart="24dp"
+    android:paddingBottom="24dp">
+
+    <com.tezov.lib_java_android.ui.component.plain.ButtonIconMaterial
+        android:id="@+id/btn_close"
+        style="@style/ButtonFlatIconRound"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="?attr/dimPaddingRoot_3"
+        android:layout_marginEnd="?attr/dimPaddingRoot_3"
+        android:elevation="1dp"
+        app:icon="@drawable/ic_close_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.tezov.lib_java_android.ui.component.plain.ButtonIconMaterial
+        android:id="@+id/btn_export_key_all"
+        style="@style/StyleButtonFlatIconText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/btn_export_key_all"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.tezov.lib_java_android.ui.component.plain.ButtonIconMaterial
+        android:id="@+id/btn_import_key_all"
+        style="@style/StyleButtonFlatIconText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/dimPaddingElement_2"
+        android:text="@string/btn_import_key_all"
+        app:layout_constraintEnd_toEndOf="@+id/btn_export_key_all"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_export_key_all" />
+
+    <com.tezov.lib_java_android.ui.layout.FrameLayout
+        android:id="@+id/sep_step_share"
+        android:layout_width="0dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="?attr/dimPaddingElement_2"
+        android:background="?attr/colorAccentLight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_import_key_all"
+        app:layout_constraintWidth_percent="0.80" />
+
+    <com.tezov.lib_java_android.ui.component.plain.ButtonIconMaterial
+        android:id="@+id/btn_import_key_shared"
+        style="@style/StyleButtonFlatIconText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/dimPaddingElement_2"
+        android:text="@string/btn_import_key_shared"
+        app:layout_constraintEnd_toEndOf="@+id/btn_export_key_all"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sep_step_share" />
+
+    <com.tezov.lib_java_android.ui.component.plain.ButtonIconMaterial
+        android:id="@+id/btn_create_key"
+        style="@style/StyleButtonFlatIconText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/dimPaddingElement_2"
+        android:text="@string/btn_create_key"
+        app:layout_constraintEnd_toEndOf="@+id/btn_export_key_all"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_import_key_shared" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

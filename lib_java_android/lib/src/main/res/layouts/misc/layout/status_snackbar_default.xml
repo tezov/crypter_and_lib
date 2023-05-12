@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/actionBarSize"
+    android:background="@drawable/status_snackbar_bg"
+    tools:layout_height="60dp">
+
+    <FrameLayout
+        android:id="@+id/img_cancel"
+        android:layout_width="32dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_cancel_24dp"
+        android:backgroundTint="?attr/colorHint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_message"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:textAppearance="?attr/styleTextBig"
+        app:autoSizeMaxTextSize="@dimen/dimText_max_auto"
+        app:autoSizeMinTextSize="@dimen/dimText_min_auto"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/img_action_layout"
+        app:layout_constraintStart_toEndOf="@id/img_cancel"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Deleted item. Would you like to retrieve this item?" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/img_action_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingEnd="@dimen/dimPaddingElement_6"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <FrameLayout
+            android:id="@+id/img_action"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dimPaddingElement_6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:background="@drawable/ic_undo_24dp"
+            tools:backgroundTint="?attr/colorPrimaryVariant" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_height="12dp"
+            tools:layout_width="48dp"
+            tools:text="@string/skb_undo"
+            tools:textColor="?attr/colorPrimaryVariant" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

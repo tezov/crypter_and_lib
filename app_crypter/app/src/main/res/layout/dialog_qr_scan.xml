@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<com.tezov.lib_java_android.ui.layout.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_modal_bg"
+    android:paddingStart="?attr/dimPaddingRoot_3"
+    android:paddingTop="?attr/dimPaddingRoot_3"
+    android:paddingEnd="?attr/dimPaddingRoot_3"
+    android:paddingBottom="?attr/dimPaddingRoot_3">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?attr/styleTextBig"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="?attr/dimPaddingElement_4"
+        android:textAppearance="?attr/styleTextBig"
+        app:layout_constraintBaseline_toBaselineOf="@+id/lbl_title"
+        app:layout_constraintStart_toEndOf="@+id/lbl_title"
+        tools:text="type" />
+
+    <com.tezov.lib_java_android.ui.layout.FrameLayout
+        android:id="@+id/sep_title"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="?attr/colorAccentLight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_title"
+        app:layout_constraintWidth_percent="0.80" />
+
+    <com.tezov.lib_java_android.camera.view.CameraViewSnap
+        android:id="@+id/camera_capture"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sep_title" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/camera_control"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.tezov.lib_java_android.ui.component.plain.ButtonMultiIconMaterial
+            android:id="@+id/btn_flash"
+            style="@style/StyleButtonIcon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:iconSize="48dp"
+            app:icon_array="@array/btn_flash_img"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:backgroundTint="@color/LightGray"
+            tools:icon="@drawable/ic_flash_auto_24dp" />
+
+        <com.tezov.lib_java_android.ui.component.plain.ButtonIconMaterial
+            android:id="@+id/btn_close"
+            style="@style/StyleButtonIcon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:icon="@drawable/ic_cancel_24dp"
+            app:iconSize="48dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:backgroundTint="@color/LightGray" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="?attr/dimPaddingElement_4"
+        android:paddingEnd="?attr/dimPaddingElement_6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_part"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/styleTextLabel"
+            android:textColor="?attr/colorAccent"
+            tools:text="2" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_parts_sep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="?attr/dimPaddingElement_6"
+            android:paddingEnd="?attr/dimPaddingElement_6"
+            android:text="/"
+            android:textAppearance="?attr/styleTextLabel"
+            android:textColor="?attr/colorAccent"
+            android:visibility="invisible" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_parts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/styleTextLabel"
+            android:textColor="?attr/colorAccent"
+            tools:text="2" />
+
+    </LinearLayout>
+
+</com.tezov.lib_java_android.ui.layout.ConstraintLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <objectAnimator
+        android:duration="@integer/flip_up_out"
+        android:propertyName="rotationX"
+        android:valueFrom="0"
+        android:valueTo="180" />
+
+    <objectAnimator
+        android:duration="0"
+        android:propertyName="alpha"
+        android:startOffset="@integer/flip_up_out_half"
+        android:valueFrom="1.0"
+        android:valueTo="0.0" />
+
+</set>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.tezov.lib_java_android.ui.component.preference.Preference android:id="@+id/pref_sku_no_ads" />
+    <com.tezov.lib_java_android.ui.component.preference.Preference
+        android:id="@+id/pref_app_rating"
+        android:icon="@drawable/ic_rating_24dp"
+        android:summary="@string/pref_app_rating_summary"
+        android:title="@string/pref_app_rating_title"
+        app:isPreferenceVisible="false" />
+    <com.tezov.lib_java_android.ui.component.preference.Preference
+        android:id="@+id/pref_app_share"
+        android:icon="@drawable/ic_share_24dp"
+        android:summary="@string/pref_app_share_summary"
+        android:title="@string/pref_app_share_title" />
+    <PreferenceCategory android:layout="@layout/preference_layout_null">
+        <com.tezov.lib_java_android.ui.component.preference.DirectoryPreference
+            android:id="@+id/pref_destination_directory"
+            android:icon="@drawable/ic_directory_24dp"
+            android:title="@string/pref_destination_directory_title" />
+        <com.tezov.lib_java_android.ui.component.preference.SwitchPreference
+            android:id="@+id/pref_keystore_keep_open"
+            android:icon="@drawable/ic_lock_open_24dp"
+            android:summary="@string/pref_keystore_keep_open_summary"
+            android:title="@string/pref_keystore_keep_open_title" />
+        <com.tezov.lib_java_android.ui.component.preference.EditTextPreference
+            android:id="@+id/pref_keystore_keep_open_delay"
+            android:title="@string/pref_keystore_keep_open_delay_title"
+            android:dialogTitle="@string/pref_keystore_keep_open_delay_title_dialog"
+            android:icon="@drawable/ic_exit_24dp" />
+        <com.tezov.lib_java_android.ui.component.preference.EditTextPreference
+            android:id="@+id/pref_keystore_auto_close_delay"
+            android:title="@string/pref_keystore_auto_close_delay_title"
+            android:dialogTitle="@string/pref_keystore_auto_close_delay_title_dialog"
+            android:icon="@drawable/ic_phone_lock_24dp" />
+        <com.tezov.lib_java_android.ui.component.preference.SwitchPreference
+            android:id="@+id/pref_alias_forget"
+            android:icon="@drawable/ic_phone_clear_24dp"
+            android:summary="@string/pref_alias_forget_summary"
+            android:title="@string/pref_alias_forget_title" />
+        <com.tezov.lib_java_android.ui.component.preference.SwitchPreference
+            android:id="@+id/pref_alias_load"
+            android:icon="@drawable/ic_identity_24dp"
+            android:summary="@string/pref_alias_load_summary"
+            android:title="@string/pref_alias_load_title" />
+        <com.tezov.lib_java_android.ui.component.preference.SwitchPreference
+            android:id="@+id/pref_history_file_delete_on_close"
+            android:icon="@drawable/ic_delete_24dp"
+            android:summary="@string/pref_history_delete_on_close_summary"
+            android:title="@string/pref_history_delete_on_close_title" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/preference_layout_title"
+        android:title="@string/pref_category_default_encryption">
+        <com.tezov.lib_java_android.ui.component.preference.ListPreference
+            android:id="@+id/pref_encrypt_key_transformation"
+            android:entries="@array/encrypt_key_transformation"
+            android:icon="@drawable/ic_transform_24dp"
+            android:title="@string/pref_encrypt_key_transformation_title" />
+        <com.tezov.lib_java_android.ui.component.preference.ListPreference
+            android:id="@+id/pref_encrypt_key_length"
+            android:entries="@array/encrypt_key_length"
+            android:icon="@drawable/ic_length_24dp"
+            android:title="@string/pref_encrypt_key_length_title" />
+        <com.tezov.lib_java_android.ui.component.preference.SwitchPreference
+            android:id="@+id/pref_encrypt_strict_mode"
+            android:icon="@drawable/ic_block_24dp"
+            android:summary="@string/pref_encrypt_strict_mode_summary"
+            android:title="@string/pref_encrypt_strict_mode_title" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:layout="@layout/preference_layout_title"
+        android:title="@string/pref_category_files_encryption">
+        <com.tezov.lib_java_android.ui.component.preference.SwitchPreference
+            android:id="@+id/pref_encrypt_file_overwrite"
+            android:summary="@string/pref_encrypt_overwrite_file_summary"
+            android:title="@string/pref_encrypt_overwrite_file_title" />
+        <com.tezov.lib_java_android.ui.component.preference.SwitchPreference
+            android:id="@+id/pref_encrypt_file_name"
+            android:summary="@string/pref_encrypt_file_name_summary"
+            android:title="@string/pref_encrypt_file_name_title" />
+        <com.tezov.lib_java_android.ui.component.preference.SwitchPreference
+            android:id="@+id/pref_encrypt_add_time_and_date_to_file_name"
+            android:summary="@string/pref_encrypt_add_time_and_date_to_file_name_summary"
+            android:title="@string/pref_encrypt_add_time_and_date_to_file_name_title" />
+        <com.tezov.lib_java_android.ui.component.preference.SwitchPreference
+            android:id="@+id/pref_encrypt_delete_file_original"
+            android:summary="@string/pref_encrypt_delete_file_original_summary"
+            android:title="@string/pref_encrypt_delete_file_original_title" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:layout="@layout/preference_layout_title"
+        android:title="@string/pref_category_files_decryption">
+        <com.tezov.lib_java_android.ui.component.preference.SwitchPreference
+            android:id="@+id/pref_decrypt_overwrite_file"
+            android:summary="@string/pref_decrypt_overwrite_file_summary"
+            android:title="@string/pref_decrypt_overwrite_file_title" />
+        <com.tezov.lib_java_android.ui.component.preference.SwitchPreference
+            android:id="@+id/pref_decrypt_delete_file"
+            android:summary="@string/pref_decrypt_delete_file_summary"
+            android:title="@string/pref_decrypt_delete_file_title" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:layout="@layout/preference_layout_title"
+        android:title="@string/pref_category_texts_encryption">
+        <com.tezov.lib_java_android.ui.component.preference.SwitchPreference
+            android:id="@+id/pref_encrypt_sign_text"
+            android:summary="@string/pref_encrypt_sign_text_summary"
+            android:title="@string/pref_encrypt_sign_text_title" />
+        <com.tezov.lib_java_android.ui.component.preference.SwitchPreference
+            android:id="@+id/pref_encrypt_add_deeplink_to_text"
+            android:summary="@string/pref_encrypt_add_deeplink_to_text_summary"
+            android:title="@string/pref_encrypt_add_deeplink_to_text_title" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:layout="@layout/preference_layout_title"
+        android:title="@string/pref_category_miscellaneous">
+        <com.tezov.lib_java_android.ui.component.preference.EditTextPreference
+            android:id="@+id/pref_encrypt_share_subject_prefix_subject"
+            android:icon="@drawable/ic_arobase_24dp"
+            android:title="@string/pref_encrypt_share_subject_title" />
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/preference_layout_null">
+        <com.tezov.lib_java_android.ui.component.preference.Preference
+            android:id="@+id/pref_app_version"
+            android:icon="@drawable/ic_cake_24dp"
+            android:title="@string/pref_app_version_title"
+            app:enableCopying="true" />
+    </PreferenceCategory>
+</androidx.preference.PreferenceScreen>

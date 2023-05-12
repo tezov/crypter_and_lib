@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_modal_bg"
+    android:paddingStart="?attr/dimPaddingRoot_1"
+    android:paddingTop="?attr/dimPaddingRoot_3"
+    android:paddingEnd="?attr/dimPaddingRoot_1"
+    android:paddingBottom="?attr/dimPaddingRoot_4">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_export_24dp"
+        android:drawablePadding="?attr/dimPaddingElement_6"
+        android:text="@string/lbl_ie_menu_format_title"
+        android:textAppearance="?attr/styleTextBig"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.tezov.lib_java_android.ui.component.plain.ButtonIconMaterial
+        android:id="@+id/btn_close"
+        style="@style/ButtonFlatIconRound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        app:icon="@drawable/ic_close_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.tezov.lib_java_android.ui.layout.FrameLayout
+        android:id="@+id/sep_step_retrieve"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="?attr/colorAccentLight"
+        app:layout_constraintEnd_toStartOf="@+id/btn_close"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_title"
+        app:layout_constraintWidth_percent="0.80" />
+
+
+    <com.tezov.lib_java_android.ui.component.plain.ButtonIconMaterial
+        android:id="@+id/btn_file_text"
+        style="@style/StyleButtonFlatIconText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="@string/btn_ie_menu_format_file_text"
+        app:layout_constraintTop_toBottomOf="@+id/sep_step_retrieve" />
+
+    <com.tezov.lib_java_android.ui.component.plain.ButtonIconMaterial
+        android:id="@+id/btn_file_gif"
+        style="@style/StyleButtonFlatIconText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/dimPaddingElement_2"
+        android:text="@string/btn_ie_menu_format_file_gif"
+        app:layout_constraintTop_toBottomOf="@+id/btn_file_text" />
+
+    <com.tezov.lib_java_android.ui.component.plain.ButtonIconMaterial
+        android:id="@+id/btn_text"
+        style="@style/StyleButtonFlatIconText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/dimPaddingElement_2"
+        android:text="@string/btn_ie_menu_format_text"
+        app:layout_constraintTop_toBottomOf="@+id/btn_file_gif" />
+
+    <com.tezov.lib_java_android.ui.component.plain.CheckBox
+        android:id="@+id/chk_remember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/chk_remember_my_choice"
+        android:textAppearance="?attr/styleTextHelper"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

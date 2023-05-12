@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<com.tezov.lib_java_android.ui.toolbar.Drawer xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="?attr/drawerTheme">
+
+    <include
+        layout="@layout/tpl_activity_tbc_tbb_overlap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        tools:headerLayout="@layout/content_drawer_header"
+        tools:menu="@menu/drawer_sample_lib" />
+
+</com.tezov.lib_java_android.ui.toolbar.Drawer>

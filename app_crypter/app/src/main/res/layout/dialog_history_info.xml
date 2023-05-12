@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/dialog_modal_bg"
+    android:paddingStart="?attr/dimPaddingRoot_3"
+    android:paddingTop="?attr/dimPaddingRoot_4"
+    android:paddingEnd="?attr/dimPaddingRoot_3"
+    android:paddingBottom="?attr/dimPaddingRoot_4">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_created_date_the"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_key_encrypted_the"
+        android:textAppearance="?attr/styleTextLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_created_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/dimPaddingElement_4"
+        android:textAppearance="?attr/styleTextNorm"
+        app:layout_constraintBaseline_toBaselineOf="@+id/lbl_created_date_the"
+        app:layout_constraintStart_toEndOf="@+id/lbl_created_date_the"
+        tools:text="date" />
+
+    <com.tezov.lib_java_android.ui.component.plain.TextViewScrollable
+        android:id="@+id/lbl_signature_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/Null"
+        android:textAppearance="?attr/styleTextLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_created_date_the"
+        tools:text="signature app" />
+
+    <com.tezov.lib_java_android.ui.component.plain.TextViewScrollable
+        android:id="@+id/lbl_signature_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/Null"
+        android:textAppearance="?attr/styleTextLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_signature_app"
+        tools:text="signature key" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_operation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?attr/styleTextLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_signature_key"
+        tools:text="operation" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/dimPaddingElement_4"
+        android:textAppearance="?attr/styleTextNorm"
+        app:layout_constraintBaseline_toBaselineOf="@+id/lbl_operation"
+        app:layout_constraintStart_toEndOf="@+id/lbl_operation"
+        tools:text="succeed" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

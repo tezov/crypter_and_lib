@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/form"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.tezov.lib_java_android.ui.component.plain.EditText
+        android:id="@+id/frm_text_in"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="?attr/dimPaddingElement_6"
+        android:layout_marginBottom="@dimen/dimPaddingElement_5"
+        android:background="@drawable/edittext_area_cipher_text_in_bg"
+        android:fadeScrollbars="false"
+        android:gravity="top|start"
+        android:inputType="textMultiLine"
+        android:paddingStart="@dimen/dimPaddingElement_4"
+        android:paddingTop="@dimen/dimPaddingElement_4"
+        android:paddingEnd="@dimen/dimPaddingElement_5"
+        android:paddingBottom="@dimen/dimPaddingElement_4"
+        android:scrollbarStyle="insideInset"
+        android:scrollbarThumbVertical="@drawable/scrollbar_vertical"
+        android:scrollbars="vertical"
+        android:scrollHorizontally="false"
+        android:textAppearance="?attr/styleTextNorm"
+        app:layout_constraintBottom_toTopOf="@+id/container_password"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.tezov.lib_java_android.ui.layout_wrapper.GlassAnimInOut
+        android:id="@+id/container_button_retrieve_glass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="?attr/dimPaddingElement_4"
+        app:anim_in_duration="250"
+        app:anim_out_duration="250"
+        app:layout_constraintBottom_toBottomOf="@+id/frm_text_in"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.tezov.lib_java_android.ui.component.plain.ButtonMultiIconMaterial
+                android:id="@+id/btn_erase"
+                style="@style/StyleButtonFlatIcon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="?attr/dimPaddingElement_4"
+                android:layout_marginEnd="?attr/dimPaddingElement_4"
+                app:icon_array="@array/btn_erase_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btn_paste"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.tezov.lib_java_android.ui.component.plain.ButtonMultiIconMaterial
+                android:id="@+id/btn_paste"
+                style="@style/StyleButtonFlatIcon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="?attr/dimPaddingElement_4"
+                app:icon_array="@array/btn_paste_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btn_scan"
+                app:layout_constraintStart_toEndOf="@+id/btn_erase"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.tezov.lib_java_android.ui.component.plain.ButtonIconMaterial
+                android:id="@+id/btn_scan"
+                style="@style/StyleButtonFlatIcon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="?attr/dimPaddingElement_4"
+                app:icon="@drawable/ic_qr_code_scan_24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btn_select"
+                app:layout_constraintStart_toEndOf="@+id/btn_paste"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.tezov.lib_java_android.ui.component.plain.ButtonIconMaterial
+                android:id="@+id/btn_select"
+                style="@style/StyleButtonFlatIcon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="?attr/dimPaddingElement_4"
+                app:icon="@drawable/ic_dot3_24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn_scan"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.tezov.lib_java_android.ui.layout_wrapper.GlassAnimInOut>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="68dp"
+        android:theme="?attr/textInputTheme"
+        app:layout_constraintBottom_toTopOf="@+id/container_button_cipher">
+
+        <com.tezov.lib_java_android.ui.component.plain.EditTextLayout
+            android:id="@+id/frm_password_layout"
+            style="?attr/textInputLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingEnd="?attr/dimPaddingElement_6"
+            app:errorIconDrawable="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_select_alias"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:helperText="helper text"
+            tools:hint="hint text">
+
+            <com.tezov.lib_java_android.ui.form.component.plain.FormEditText
+                android:id="@+id/frm_password"
+                style="?attr/textInputStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                app:hint_inner="@string/frm_inner_crypt_password"
+                app:hint_outer="@string/frm_outer_crypt_password"
+                app:icon_mode="password"
+                tools:text="password" />
+
+        </com.tezov.lib_java_android.ui.component.plain.EditTextLayout>
+
+        <com.tezov.lib_java_android.ui.component.plain.EditTextLayout
+            android:id="@+id/frm_alias_layout"
+            style="?attr/textInputLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingEnd="?attr/dimPaddingElement_6"
+            android:visibility="invisible"
+            app:errorIconDrawable="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_select_alias"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:helperText="helper text"
+            tools:hint="hint text">
+
+            <com.tezov.lib_java_android.ui.form.component.plain.FormEditText
+                android:id="@+id/frm_alias"
+                style="?attr/textInputStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:enabled="false"
+                app:hint_outer="@string/frm_outer_alias"
+                app:icon_mode="none"
+                tools:text="alias" />
+
+        </com.tezov.lib_java_android.ui.component.plain.EditTextLayout>
+
+        <com.tezov.lib_java_android.ui.component.plain.ButtonIconMaterial
+            android:id="@+id/btn_select_alias"
+            style="@style/StyleButtonFlatIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8sp"
+            app:icon="@drawable/ic_key_24dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/frm_password_layout"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_button_cipher"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.tezov.lib_java_android.ui.component.plain.ButtonMultiIconMaterial
+            android:id="@+id/btn_encrypt"
+            style="@style/StyleButtonFlatIconText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="?attr/dimPaddingElement_4"
+            android:maxLines="1"
+            app:autoSizeMaxTextSize="@dimen/btn_size_max_txt"
+            app:autoSizeMinTextSize="@dimen/btn_size_min_txt"
+            app:autoSizeTextType="uniform"
+            app:icon_array="@array/btn_cipher_start_img"
+            app:layout_constraintEnd_toStartOf="@+id/btn_decrypt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:text_array="@array/btn_file_encrypt_start_txt" />
+
+        <com.tezov.lib_java_android.ui.component.plain.ButtonMultiIconMaterial
+            android:id="@+id/btn_decrypt"
+            style="@style/StyleButtonFlatIconText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="?attr/dimPaddingElement_4"
+            android:maxLines="1"
+            app:autoSizeMaxTextSize="@dimen/btn_size_max_txt"
+            app:autoSizeMinTextSize="@dimen/btn_size_min_txt"
+            app:autoSizeTextType="uniform"
+            app:icon_array="@array/btn_cipher_start_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_encrypt"
+            app:layout_constraintTop_toTopOf="parent"
+            app:text_array="@array/btn_file_decrypt_start_txt" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

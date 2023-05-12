@@ -1,0 +1,195 @@
+plugins {
+    id 'com.android.application'
+    id 'com.tezov.application'
+    id 'applovin-quality-service'
+}
+applovin {
+    apiKey "KItOJ8FevBgBg4rhB6RoorqrUKBK7i8LhwQVBO_KHtTXH26TqeEFp8J_0E8HBpozeG84Wq0sxLSWHT1fhqxW6u"
+}
+
+android {
+    compileSdkVersion 32
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    defaultConfig {
+        multiDexEnabled true
+        minSdkVersion 21
+        targetSdkVersion 32
+        resConfigs "en", "fr"
+    }
+    signingConfigs {
+        releaseConfig {
+//            def keystoreReleaseProperties = new Properties()
+//            keystoreReleaseProperties.load(new FileInputStream(file("keyStoreRelease.properties")))
+//            storeFile file(keystoreReleaseProperties.storeFile)
+//            storePassword keystoreReleaseProperties.storePassword
+//            keyAlias keystoreReleaseProperties.keyAlias
+//            keyPassword keystoreReleaseProperties.keyPassword
+        }
+        debugConfig {
+//            def keystoreDebugProperties = new Properties()
+//            keystoreDebugProperties.load(new FileInputStream(file("keyStoreDebug.properties")))
+//            storeFile file(keystoreDebugProperties.storeFile)
+//            storePassword keystoreDebugProperties.storePassword
+//            keyAlias keystoreDebugProperties.keyAlias
+//            keyPassword keystoreDebugProperties.keyPassword
+        }
+    }
+    buildTypes {
+        release {
+            shrinkResources true
+            minifyEnabled true
+//            signingConfig signingConfigs.releaseConfig
+// you gonna need to create your rsa key if you wanna buid in release
+            debuggable false
+        }
+        debug {
+            shrinkResources false
+            minifyEnabled false
+//            signingConfig signingConfigs.debugConfig
+// you need to create a rsa key to use the plugin tezov to be able to build in release compliance with debugLog available
+// to make it possible to chase a proguard bug or other release bug that you can't see in debug mode
+        }
+    }
+    sourceSets {
+        main {
+            def main_layouts = file('src/main/res/layouts').listFiles()
+            res {
+                srcDirs 'src/main/res', main_layouts
+            }
+            java {
+                srcDirs 'src/main/java'
+                filter.exclude '**/*TODO*'
+            }
+        }
+        debug {
+            res {
+                srcDirs 'src/build_type/debug/res'
+            }
+            java {
+                srcDirs 'src/build_type/debug/java'
+            }
+        }
+        release {
+            res {
+                srcDirs 'src/build_type/release/res'
+            }
+            java {
+                srcDirs 'src/build_type/release/java'
+            }
+        }
+    }
+}
+configurations {
+    all*.exclude group: 'com.google.firebase', module: 'firebase-common'
+    all*.exclude group: 'com.google.firebase', module: 'firebase-core'
+    all*.exclude group: 'com.google.firebase', module: 'firebase-auth'
+    all*.exclude group: 'com.google.firebase', module: 'firebase-database'
+    all*.exclude group: 'com.google.firebase', module: 'firebase-storage'
+    all*.exclude group: 'com.google.firebase', module: 'firebase-analytics'
+}
+dependencies {
+    api project(':lib_java_android')
+    implementation 'com.google.zxing:core:3.4.1'
+    implementation 'com.android.billingclient:billing:5.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+
+    implementation "com.google.android.gms:play-services-ads-identifier:18.0.1"
+    implementation 'com.applovin:applovin-sdk:11.3.1'
+    implementation 'com.applovin.mediation:google-adapter:20.6.0.3'
+    implementation 'com.applovin.mediation:facebook-adapter:6.8.0.12'
+
+    //Test
+    debugImplementation 'junit:junit:4.13.1'
+    debugImplementation 'androidx.test.ext:junit:1.1.3'
+    debugImplementation 'com.google.truth:truth:1.0.1'
+}
+
+tezov {
+    debug {
+        enable = false //NOW Always check before release!!!!
+        keepSourceFile = false
+        keepLog = false
+        repackage = true
+        obfuscate = true
+    }
+    release {
+        obfuscate = true //NOW Always check before release!!!!
+    }
+    configuration {
+        applicationId = 'com.tezov.crypter'
+    }
+    version {
+        major = 1
+        minor = 0
+        patch = 98
+    }
+}
+tezov.beforeVariant{ buildType ->
+    def admax_id = "MW9zWmtiTNLWh7FWA61-3dno_Xzt24c9GS0IDeA5KWTnhMcUDrW_fQgMUdHrxS0IU5DWJSUGGuZqW4X1V1E7Rw"
+    def ad_banner_id = "3841f74045bc3179"
+    def ad_interstitial_id = "805e7b5974061587"
+
+    def admob_id = "ca-app-pub-7343519600126304~8682895172"
+//    admob_banner = "ca-app-pub-7343519600126304/1491812627"
+//    admob_interstitial = "ca-app-pub-7343519600126304/7865649287"
+
+//    def admeta_id = "721957742127789"
+//    admeta_banner = "721957742127789_721958252127738"
+//    admeta_interstitial = "721957742127789_721958512127712"
+
+    def billing_sku_no_ads = null
+    def build = null
+    if(buildType == DEBUG){
+        build = android.buildTypes.debug
+        //<SAMPLE SKU>
+        def SKU_TEST_FAKE = "android.test.fake"
+        def SKU_TEST_PURCHASE = "android.test.purchase"
+        def SKU_TEST_PURCHASED = "android.test.purchased"
+        def SKU_TEST_CANCELED = "android.test.canceled"
+        def SKU_TEST_REFUNDED = "android.test.refunded"
+        def SKU_TEST_UNAVAILABLE = "android.test.item_unavailable"
+        //</SAMPLE SKU>
+        billing_sku_no_ads = SKU_TEST_PURCHASE
+    }
+    else if(buildType == RELEASE){
+        build = android.buildTypes.release
+        billing_sku_no_ads = "no_ads_premium"
+    }
+    build.resValue "string", "application_version", tezov.version.name.get()
+    build.manifestPlaceholders += [application_id: tezov.configuration.applicationId.get()]
+    build.manifestPlaceholders += [package_name: buildType.getPackageName(project)]
+
+    build.resValue "string", "billing_sku_no_ads", billing_sku_no_ads
+
+    build.manifestPlaceholders += [admax_id: admax_id]
+    build.resValue "string", "ad_banner_id", ad_banner_id
+    build.resValue "string", "ad_interstitial_id", ad_interstitial_id
+    build.manifestPlaceholders += [admob_id: admob_id]
+
+    def extension_cipher_file = "cfx"
+    build.resValue "string", "extension_cipher_file", extension_cipher_file
+    build.manifestPlaceholders += [extension_cipher_file: extension_cipher_file]
+
+    def extension_cipher_text = "ctx"
+    build.resValue "string", "extension_cipher_text", extension_cipher_text
+    build.manifestPlaceholders += [extension_cipher_text: extension_cipher_text]
+
+    def extension_keys_backup = "ckb"
+    build.resValue "string", "extension_keys_backup", extension_keys_backup
+    build.manifestPlaceholders += [extension_keys_backup: extension_keys_backup]
+
+    def extension_share_key_public = "ckp"
+    build.resValue "string", "extension_share_key_public", extension_share_key_public
+    build.manifestPlaceholders += [extension_share_key_public: extension_share_key_public]
+
+    def extension_share_key_encrypted = "cks"
+    build.resValue "string", "extension_share_key_encrypted", extension_share_key_encrypted
+    build.manifestPlaceholders += [extension_share_key_encrypted: extension_share_key_encrypted]
+
+}
+
+

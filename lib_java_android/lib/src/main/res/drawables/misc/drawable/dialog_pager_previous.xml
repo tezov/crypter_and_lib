@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <size
+                android:width="12dp"
+                android:height="24dp" />
+            <solid android:color="?attr/colorFaintDark" />
+            <corners
+                android:bottomLeftRadius="48dp"
+                android:topLeftRadius="48dp" />
+        </shape>
+    </item>
+    <item android:drawable="@drawable/ic_previous_24dp" />
+</layer-list>
+
+

@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tezov.crypter">
+
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="29" />
+
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera2.full"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:name="application.ApplicationSystem_bt"
+        android:allowBackup="false"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="false"
+        android:theme="@style/ThemeApplication">
+
+        <meta-data android:name="applovin.sdk.key"
+            android:value="${admax_id}"/>
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="${admob_id}" />
+
+        <meta-data
+            android:name="com.tezov.lib.CONFIG"
+            android:value="config_lib" />
+
+        <provider
+            android:name="com.tezov.lib_java_android.provider.fileProvider.FileProvider"
+            android:authorities="${package_name}.provider"
+            android:enabled="true"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths" />
+        </provider>
+
+        <activity
+            android:name="com.tezov.crypter.activity.activityFilter.ActivityActionView"
+            android:theme="@style/ThemeTransparent"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:host="*" />
+                <data android:scheme="content" />
+                <data android:scheme="file" />
+                <data android:mimeType="application/octet-stream" />
+                <data android:mimeType="text/plain" />
+                <data android:mimeType="application/vnd.${extension_cipher_file}" />
+                <data android:mimeType="application/${extension_cipher_file}" />
+                <data android:pathPattern=".*@.*" />
+                <data android:pathPattern=".*attachment.*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:host="*" />
+                <data android:scheme="file" />
+                <data android:scheme="content" />
+                <data android:mimeType="application/octet-stream" />
+                <data android:mimeType="text/plain" />
+                <data android:mimeType="application/vnd.${extension_cipher_file}" />
+                <data android:mimeType="application/${extension_cipher_file}" />
+                <data android:pathPattern=".*\\.${extension_cipher_file}" />
+                <data android:pathPattern=".*\\..*\\.${extension_cipher_file}" />
+                <data android:pathPattern=".*\\..*\\..*\\.${extension_cipher_file}" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.${extension_cipher_file}" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\.${extension_cipher_file}" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\.${extension_cipher_file}" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\.${extension_cipher_file}" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.${extension_cipher_file}" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.${extension_cipher_file}" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:host="*" />
+                <data android:scheme="content" />
+                <data android:scheme="file" />
+                <data android:mimeType="application/octet-stream" />
+                <data android:mimeType="text/plain" />
+                <data android:mimeType="application/vnd.${extension_cipher_text}" />
+                <data android:mimeType="application/${extension_cipher_text}" />
+                <data android:pathPattern=".*@.*" />
+                <data android:pathPattern=".*attachment.*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:host="*" />
+                <data android:scheme="file" />
+                <data android:scheme="content" />
+                <data android:mimeType="application/octet-stream" />
+                <data android:mimeType="text/plain" />
+                <data android:mimeType="application/vnd.${extension_cipher_text}" />
+                <data android:mimeType="application/${extension_cipher_text}" />
+                <data android:pathPattern=".*\\.${extension_cipher_text}" />
+                <data android:pathPattern=".*\\..*\\.${extension_cipher_text}" />
+                <data android:pathPattern=".*\\..*\\..*\\.${extension_cipher_text}" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.${extension_cipher_text}" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\.${extension_cipher_text}" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\.${extension_cipher_text}" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\.${extension_cipher_text}" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.${extension_cipher_text}" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.${extension_cipher_text}" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:host="*" />
+                <data android:scheme="content" />
+                <data android:scheme="file" />
+                <data android:mimeType="application/octet-stream" />
+                <data android:mimeType="text/plain" />
+                <data android:mimeType="application/vnd.${extension_share_key_public}" />
+                <data android:mimeType="application/${extension_share_key_public}" />
+                <data android:pathPattern=".*@.*" />
+                <data android:pathPattern=".*attachment.*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:host="*" />
+                <data android:scheme="file" />
+                <data android:scheme="content" />
+                <data android:mimeType="application/octet-stream" />
+                <data android:mimeType="text/plain" />
+                <data android:mimeType="application/vnd.${extension_share_key_public}" />
+                <data android:mimeType="application/${extension_share_key_public}" />
+                <data android:pathPattern=".*\\.${extension_share_key_public}" />
+                <data android:pathPattern=".*\\..*\\.${extension_share_key_public}" />
+                <data android:pathPattern=".*\\..*\\..*\\.${extension_share_key_public}" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.${extension_share_key_public}" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\.${extension_share_key_public}" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\.${extension_share_key_public}" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\.${extension_share_key_public}" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.${extension_share_key_public}" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.${extension_share_key_public}" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:host="*" />
+                <data android:scheme="content" />
+                <data android:scheme="file" />
+                <data android:mimeType="application/octet-stream" />
+                <data android:mimeType="text/plain" />
+                <data android:mimeType="application/vnd.${extension_share_key_encrypted}" />
+                <data android:mimeType="application/${extension_share_key_encrypted}" />
+                <data android:pathPattern=".*@.*" />
+                <data android:pathPattern=".*attachment.*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:host="*" />
+                <data android:scheme="file" />
+                <data android:scheme="content" />
+                <data android:mimeType="application/octet-stream" />
+                <data android:mimeType="text/plain" />
+                <data android:mimeType="application/vnd.${extension_share_key_encrypted}" />
+                <data android:mimeType="application/${extension_share_key_encrypted}" />
+                <data android:pathPattern=".*\\.${extension_share_key_encrypted}" />
+                <data android:pathPattern=".*\\..*\\.${extension_share_key_encrypted}" />
+                <data android:pathPattern=".*\\..*\\..*\\.${extension_share_key_encrypted}" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\.${extension_share_key_encrypted}" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\.${extension_share_key_encrypted}" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\.${extension_share_key_encrypted}" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\.${extension_share_key_encrypted}" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.${extension_share_key_encrypted}" />
+                <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\..*\\.${extension_share_key_encrypted}" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name="com.tezov.crypter.activity.activityFilter.ActivityDeepLink"
+            android:theme="@style/ThemeTransparent"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="com.tezov.crypter"
+                    android:pathPrefix="/${extension_cipher_text}/"
+                    android:scheme="https" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="com.tezov.crypter"
+                    android:pathPrefix="/${extension_share_key_public}/"
+                    android:scheme="https" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="com.tezov.crypter"
+                    android:pathPrefix="/${extension_share_key_encrypted}/"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tezov.crypter.activity.ActivityLauncher"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeTransparent"
+            android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="activity.ActivityMain_bt"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+
+        <activity
+            android:name="com.tezov.crypter.activity.ActivityPreference"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name="com.tezov.crypter.activity.ActivityPrivacyPolicy"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+
+        <receiver
+            android:name=".application.ReceiverAlarmKeystore"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.tezov.crypter.ALARM.keystore" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.tezov.lib_java_android.application.ApplicationSystem$ReceiverAlarmCloseApp"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.tezov.lib.ALARM.close.application" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

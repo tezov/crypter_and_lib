@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <com.tezov.lib_java_android.ui.component.plain.FocusCemetery
+        android:layout_width="1px"
+        android:layout_height="1px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.tezov.lib_java_android.ui.component.plain.EditTextLayout
+        android:id="@+id/frm_alias_layout"
+        style="?attr/textInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="?attr/textInputTheme"
+        app:errorIconDrawable="@null"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:helperText="helper text"
+        tools:hint="Alias">
+
+        <com.tezov.lib_java_android.ui.form.component.plain.FormEditText
+            android:id="@+id/frm_alias"
+            style="?attr/textInputStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:imeOptions="actionNext"
+            app:hint_inner="@string/frm_inner_alias"
+            app:hint_outer="@string/frm_outer_alias"
+            app:icon_mode="clear"
+            tools:text="alias" />
+    </com.tezov.lib_java_android.ui.component.plain.EditTextLayout>
+
+    <com.tezov.lib_java_android.ui.component.plain.EditTextLayout
+        android:id="@+id/frm_password_layout"
+        style="?attr/textInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="?attr/textInputTheme"
+        app:errorIconDrawable="@null"
+        app:layout_constraintTop_toBottomOf="@+id/frm_alias_layout"
+        tools:helperText="helper text"
+        tools:hint="Password">
+
+        <com.tezov.lib_java_android.ui.form.component.plain.FormEditText
+            android:id="@+id/frm_password"
+            style="?attr/textInputStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            app:hint_inner="@string/frm_inner_crypt_password"
+            app:hint_outer="@string/frm_outer_crypt_password"
+            app:icon_mode="password"
+            tools:text="password" />
+    </com.tezov.lib_java_android.ui.component.plain.EditTextLayout>
+
+    <com.tezov.lib_java_android.ui.component.plain.CheckBox
+        android:id="@+id/chk_password_nullify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="@string/chk_nullify_password"
+        android:textAppearance="?attr/styleTextLabelSmall"
+        app:layout_constraintTop_toBottomOf="@+id/frm_password_layout" />
+
+    <com.tezov.lib_java_android.ui.component.plain.CheckBox
+        android:id="@+id/chk_encrypt_strict_mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:text="@string/chk_strict_mode"
+        android:textAppearance="?attr/styleTextLabelSmall"
+        app:layout_constraintTop_toBottomOf="@+id/chk_password_nullify" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frame_method_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="?attr/dimPaddingElement_5"
+        app:layout_constraintTop_toBottomOf="@+id/chk_encrypt_strict_mode">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_method_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="?attr/dimPaddingElement_4"
+            android:text="@string/lbl_key_method_title"
+            android:textAppearance="?attr/styleTextLabel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spn_key_algo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimPaddingElement_6"
+            android:entries="@array/encrypt_key_transformation"
+            android:spinnerMode="dropdown"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/spn_key_length"
+            app:layout_constraintStart_toEndOf="@+id/lbl_method_spinner"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spn_key_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/encrypt_key_length"
+            android:spinnerMode="dropdown"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/spn_key_algo"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/container_option_button"
+        layout="@layout/icl_key_option_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/frame_method_spinner" />
+</merge>
+
+

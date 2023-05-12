@@ -1,0 +1,266 @@
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<!DOCTYPE html>
+<html lang="en"
+        xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta
+                content="text/html; charset=UTF-8"
+                http-equiv="Content-Type" />
+        <link
+                href="./how_to_use.css"
+                rel="stylesheet">
+    </head>
+    <body>
+        <h3>Comment ça marche ?</h3>
+        <p>
+            <strong>
+                <u>Cryptage</u>
+            </strong>
+        </p>
+        <ul>
+            <li>selectionnez un ficher ou écrire du texte</li>
+            <li>selectionnez un alias de clé ou entrez un mot de passe</li>
+            <li>cliquez sur le boutton
+                <b>Crypter</b>
+            </li>
+            <li>Quand le cryptage est fini, vous pouvez partager le fichier crypté ou le texte
+                crypté
+            </li>
+        </ul>
+        <p>
+            <strong>
+                <u>Décryptage</u>
+            </strong>
+        </p>
+        <ul>
+            <li>selectionnez un ficher crypté ou coller du texte crypté</li>
+            <li>selectionnez un alias de clé ou entrez le mot de passe utilisé pour le cryptage</li>
+            <li>cliquez sur le boutton
+                <b>Dérypter</b>
+            </li>
+            <li>Quand le décryptage est fini, vous pouvez ouvrir le fichier décrypté ou lire le
+                texte décrypté
+            </li>
+        </ul>
+        </br>
+        <p>
+            <strong>
+                <u>Keystore</u>
+            </strong>
+        </p>
+        <p>Au lieu d'utiliser un mot de passe à chaque fois, l'utilisateur peut utiliser le Keystore
+            afin de générer des clés lié à un alias.
+            Il suffit alors de sélectionner un alias pour crypter ou décrypter.
+        </p>
+        <p>Le Keystore est protégé par un mot de passe utilisateur. Toutes les clés
+            générées sont conservées chiffrées sur l'appareil.
+        </p>
+        <p>Par défault, le mot de passe qui a servi a générer une clé n'est pas conservé.
+        </p>
+        <p>Si l'utilisateur préfére partager son mot de passe plutôt que la clé générée avec un
+            autre appareils, alors
+            le mot de passe peut être retenu avec un cryptage non réversible. Cela permet à un
+            appareil
+            n'ayant pas la clé de cryptage
+            de déchiffrer un fichier uniquement à l'aide du mot de passe ayant servi à l'encryptage.
+        </p>
+        <p>Pour retenir un mot de passe (avec cryptage non réversible), l'utilisateur doit
+            explicitement décocher la case <b>Nullifier Password</b> lors de la création de la clé.
+        </p>
+        </br>
+        <p>
+            <strong>
+                <u>Partager une clé</u>
+            </strong>
+        </p>
+        <p>Le partage se fait en 2 étapes avec un protocol ECDH <u><b>initié par le receveur</b></u>. Le receveur
+            doit envoyer une clé public à l'émetteur. L'émetteur peut alors
+            crypter sa clé et l'envoyer au réceveur.
+        </p>
+        <ul>
+            <li>1-
+                <b>
+                    <u>Receveur</u>
+                </b>
+                ouvrir le
+                <b>Keystore</b>
+                (bouton avec l'icone de clé)
+            </li>
+            <li>2-
+                <b>
+                    <u>Receveur</u>
+                </b>
+                cliquez sur le bouton
+                <b>action(+)</b>
+                (en haut à droite)
+            </li>
+            <li>3-
+                <b>
+                    <u>Receveur</u>
+                </b>
+                cliquez sur le boutton
+                <b>Importer une clé partagée</b>
+            </li>
+            <li>4-
+                <b>
+                    <u>Receveur</u>
+                </b>
+                envoyez la clé public à
+                <b>
+                    <u>l'Émetteur</u>
+                </b>
+                (avec une application de messagerie ou affichez le qr code que l'émetteur scannera)
+            </li>
+        </ul>
+        </br>
+        <ul>
+            <li>5-
+                <b>
+                    <u>Émetteur</u>
+                </b>
+                ouvrir le
+                <b>Keystore</b>
+                (bouton avec l'icone de clé)
+            </li>
+            <li>6-
+                <b>
+                    <u>Émetteur</u>
+                </b>
+                glissez la clé vers la droite et cliquez sur le boutton
+                <b>partager</b>
+                de la clé que vous souhaitez partager
+            </li>
+            <li>7-
+                <b>
+                    <u>Émetteur</u>
+                </b>
+                recevoir la clé public du
+                <b>
+                    <u>Receveur</u>
+                </b>
+                (depuis une application de messagerie ou scannez le qr code présenté par le
+                receveur)
+            </li>
+            <li>8-
+                <b>
+                    <u>Émetteur</u>
+                </b>
+                envoyez la clé public au
+                <b>
+                    <u>Receveur</u>
+                </b>
+                (avec une application de messagerie ou affichez le qr code que le receveur scannera)
+            </li>
+        </ul>
+        </br>
+        <ul>
+            <li>9-
+                <b>
+                    <u>Receveur</u>
+                </b>
+                recevoir la clé partagée cryptée de
+                <b>
+                    <u>l'Émetteur</u>
+                </b>
+                (depuis une application de messagerie ou scannez le qr code présenté par l'émetteur)
+            </li>
+            <li>10-
+                <b>
+                    <u>Receveur</u>
+                </b>
+                cliquez sur le bouton
+                <b>Confirme</b>
+                pour confirmer l'import de la clé
+            </li>
+        </ul>
+        </br>
+        <p>
+            <strong>
+                <u>Stricte mode</u>
+            </strong>
+        </p>
+        <p>Par défault, à chaque encryption le sel, le nombre d'itération, la longueure de clé et
+            l'algorithme de cryptage sont ajoutés
+            aux données cryptées permettant de reconstruire la clé à partir du mot de passe. Cela
+            permet donc de décrypter les données avec le mot de passe ou la clé
+        </p>
+        <p>L'utilisateur à également la possibilité d'activer l'option <b>Stricte mode</b>.
+            Dans ce mode, aucunes informations permettant de reconstruire la clé
+            à partir du mot de passe n'est ajoutées aux données. Seul la clé permet de décrypter les
+            données (Cela ajoute un niveau de protection contre les attaques par dictionnaires).
+            Avec ce mode, l'utisateur doit faire une sauvegarde de ses clés avec la fonctionnalité
+            <b>Exportez toutes les clés</b>
+            et les conserver dans un endroit sûre.
+        <p>
+        <p>Perdez ces clés et il sera impossible de décrypter vos données</p>
+        </br>
+        <p>
+            <strong>
+                <u>Notes</u>
+            </strong>
+        </p>
+        <p>-Les fichiers/textes cryptés auront l'extension ".cfx" or ".ctx" et seront dans
+            le dossier
+            android media
+            <b>Documents</b>
+            ou dans le
+            <b>dossier définie par l'utilisateur</b>
+        </p>
+        <p>-Chaque fichier est encrypté avec une clé AES differente générée aléatoirement à partir
+            d'un mot de passe ou de la clé associé à un alias
+        </p>
+        <p>-Les fichiers décryptés seront dans l'un des dossiers android media(Pictures, Music,
+            Movies or
+            Documents) ou dans le
+            <b>dossier définie par l'utilisateur</b>
+        </p>
+        <p>-Les fichiers décryptés reprendront leurs nom d'origines avec peut être un numéro de
+            copie si un fichier avec ce nom existe déjà
+        </p>
+        </br>
+        <p>
+            <strong>
+                <u>Comment le cryptage est fait?</u>
+            </strong>
+        </p>
+        <p>-Le cryptage est fait avec la méthode choisi par l'utilisateur (AES_CTR, AES_CBC,
+            AES_GCM).
+            La méthode AES_GCM est recommendée. Les autres méthodes (AES_CTR, AES_CBC) sont
+            également suffisamment sécuritaire et un peu plus rapide
+        </p>
+        <p>-Chaque clé secréte est générée à partir d'un mot de passe avec l'algorithme
+            PBKDF2WithHmacSHA1
+        </p>
+        <p>-La longueure de chaque clé secréte est choisi par l'utilisateur (128, 192, 256).
+            la longueure 256 est recommendée même si (128, 192) sont suffisamment sécuritaire
+        </p>
+        <p>-Le nombre d'itération et le sel sont générés alératoirement pour chaque nouvelle clé
+            secréte
+            avec l'algorithm SHA1PRNG
+        </p>
+        <p>-Les données cryptées sont signées avec l'algorithm HmacSHA256</p>
+        <p>-Pour chaque cryptage un nouveau vecteur d'initialisation généré aléatoirement avec
+            l'algorithm SHA1PRNG est utilisé
+        </p>
+        <p>-Pour chaque signature un nouveau vecteur d'initialisation généré aléatoirement avec
+            l'algorithm SHA1PRNG est utilisé conjointement avec le tag
+        </p>
+        <p>-Uniquement pour le chiffrage de texte, l'utilisateur peut choisir un cryptage sans
+            signature ni authentification pour réduire la longueure du message. Cela est suffisement
+            sécuritaire mais
+            nous recommandons de laisser la signature et l'authentification. Si la longueure du
+            message vous
+            pose un souci, il suffit de partager le texte en tant que fichier.
+        </p>
+        <p>-Le partage de clés est fait avec une paire de clés asymmétriques générées sur chaque
+            appareil et sont echangées avec un protocol ECDH
+        </p>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<resources>
+    <string name="validator_date">doit être</string>
+    <string name="validator_email">email invalide</string>
+    <string name="validator_ipv4">ip invalide</string>
+    <string name="validator_ipv4_multicast">group invalide</string>
+    <string name="validator_port">[1024, 65535]</string>
+    <string name="validator_port_dynamic">[49152, 65535]</string>
+    <string name="validator_port_user">[1024, 49151]</string>
+    <string name="validator_false">toujours invalide"</string>
+    <string name="validator_true">toujours valide"</string>
+    <string name="validator_not_empty">ne dois pas être vide</string>
+    <string name="validator_number">nombre invalide</string>
+    <string name="validator_number_empty">ne dois pas être vide</string>
+    <string name="validator_digit">invalid number</string>
+    <string name="validator_digit_empty">should not be empty</string>
+
+    <string name="validator_password_format">doit être</string>
+    <string name="validator_password_format_digit">digit</string>
+    <string name="validator_password_format_min">min</string>
+    <string name="validator_password_length_max">min</string>
+
+    <string name="validator_password_pattern">ne respecte le modèle de security</string>
+
+    <string name="validator_point">doit être</string>
+    <string name="validator_position">doit être</string>
+    <string name="validator_bytes">doit être</string>
+    <string name="validator_bytes_digit">digit</string>
+    <string name="validator_bytes_min">min</string>
+    <string name="validator_bytes_max">min</string>
+
+    <string name="validator_file_extension">doit être</string>
+</resources>

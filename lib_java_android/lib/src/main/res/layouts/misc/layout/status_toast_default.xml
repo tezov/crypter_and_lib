@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toast_layout_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/status_toast_bg">
+
+    <TextView
+        android:id="@+id/lbl_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="?attr/dimPaddingRoot_2"
+        android:paddingTop="?attr/dimPaddingRoot_3"
+        android:paddingEnd="?attr/dimPaddingRoot_2"
+        android:paddingBottom="?attr/dimPaddingRoot_3"
+        android:textAppearance="?attr/styleTextBig"
+        tools:text="copied from clipboard" />
+</FrameLayout>

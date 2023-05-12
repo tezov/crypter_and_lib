@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<resources>
+
+    <string name="shr_encrypted_text">cipher_texte</string>
+
+    <string name="shr_public_key">cle_public</string>
+    <string name="shr_encrypted_key">shared_key</string>
+
+    <string name="activity_privacy_policy_title">Politique de confidentialité</string>
+    <string name="activity_preference_policy_title">Préférences</string>
+    <string name="frg_info_title">Menu</string>
+    <string name="frg_cipher_file_title">Chiffrement fichier</string>
+    <string name="frg_cipher_text_title">Chiffrement text</string>
+
+    <string name="lbl_processing">patientez…</string>
+
+    <string name="mn_info_title">Info</string>
+    <string name="mn_cipher_text_title">Texte</string>
+    <string name="mn_cipher_file_title">Fichier</string>
+
+    <string name="pref_category_default_encryption">Défaut chiffrement</string>
+    <string name="pref_category_files_encryption">Défaut fichier chiffrement</string>
+    <string name="pref_category_files_decryption">Défaut fichier déchriffrement</string>
+    <string name="pref_category_texts_encryption">Défaut texts chiffrement</string>
+    <string name="pref_category_miscellaneous">Divers</string>
+
+    <string name="pref_destination_directory_title">Dossier de destination</string>
+    <string name="pref_destination_directory_android_summary">les fichiers générés seront placés dans un des dossiers d\'android media (Documents, Pictures, Movies or Music) en fonction de l\'extension du fichier</string>
+    <string name="pref_destination_directory_summary">les fichiers générés seront placés dans le dossier %s</string>
+
+    <string name="pref_contact">Contact</string>
+    <string name="pref_privacy_policy">Politique de confidentialité</string>
+
+    <string name="mn_setting">Paramètres</string>
+    <string name="mn_privacy_policy">Politique de confidentialité</string>
+    <string name="mn_keystore_close">Fermer keystore</string>
+    <string name="mn_keystore_delete">Supprimer keystore</string>
+    <string name="mn_history_file_delete">Supprimer historique fichier</string>
+
+    <string name="pref_sku_no_ads_buy_full_version_title">Acheter la version sans publicités?</string>
+    <string name="pref_sku_no_ads_buy_full_version_summary">montrez que vous aimez cet application :)</string>
+
+    <string name="pref_sku_no_ads_owned_title">Version sans publicités débloquée.</string>
+    <string name="pref_sku_no_ads_owned_summary">merci pour votre soutient</string>
+
+    <string name="pref_app_version_title">Application version</string>
+    <string name="pref_app_rating_title">Donner votre avis?</string>
+    <string name="pref_app_rating_summary">laisser nous votre avis and informer les autres utilisateurs de vos sentiments concernant cette application</string>
+
+    <string name="pref_app_share_title">Partager application</string>
+    <string name="pref_app_share_summary">partager application avec un ami? envoyer un lien direct pour télécharger cette application</string>
+
+    <string name="pref_encrypt_share_subject_title">Email préfixe sujet</string>
+    <string name="pref_encrypt_share_subject_prefix_summary">"%s" est préfixé au sujet quand le fichier crypté est partagé par email</string>
+    <string name="pref_encrypt_share_subject_prefix_summary_none">rien n\'est préfixé au sujet quand le fichier crypté est partagé par email</string>
+
+    <string name="pref_keystore_auto_close_delay_title">Keystore auto-close delai</string>
+    <string name="pref_keystore_auto_close_delay_title_dialog">Auto-close delai(minutes)</string>
+    <string name="pref_keystore_auto_close_delay_summary">delai de %d minutes avant fermeture du keystore quand l\'application n\'est pas visible (null pour désactiver)</string>
+    <string name="pref_keystore_auto_close_delay_disabled_summary">delai avant fermeture du keystore quand l\'application n\'est pas visible (désactivé)</string>
+
+    <string name="pref_keystore_keep_open_title">Keystore reste ouvert</string>
+    <string name="pref_keystore_keep_open_summary">keystore reste ouvert ou ré-ouvre automatiquement si besoin</string>
+
+    <string name="pref_keystore_keep_open_delay_title">Keystore reste ouvert max time</string>
+    <string name="pref_keystore_keep_open_delay_title_dialog">Reste ouvert max time(jours)</string>
+    <string name="pref_keystore_keep_open_delay_summary">aprés %d jours d\'inactivités, le keystore ne se ré-ouvre pas automatiquement (null pour désactiver)</string>
+    <string name="pref_keystore_keep_open_delay_disabled_summary">aprés x jours d\'inactivités, le keystore ne se ré-ouvre pas automatiquement (désactivé)</string>
+
+    <string name="pref_alias_forget_title">Oublier alias en mémoire</string>
+    <string name="pref_alias_forget_summary">oublier alias en mémoire quand le keystore est fermé.</string>
+
+    <string name="pref_alias_load_title">Charger alias en mémoire</string>
+    <string name="pref_alias_load_summary">charger alias en mémoire quand l\'application démarre.</string>
+
+    <string name="pref_history_delete_on_close_title">Supprimer historique auto</string>
+    <string name="pref_history_delete_on_close_summary">supprimer historique à chaque fermeture de l\'application</string>
+
+    <string name="pref_encrypt_key_transformation_title">Chiffrement transformation</string>
+    <string name="pref_encrypt_key_transformation_summary">%s est utilisée par default comme méthode de cryptage</string>
+
+    <string name="pref_encrypt_key_length_title">Longueur de clé</string>
+    <string name="pref_encrypt_key_length_summary">clé de longeur de %sbites est généré par défault</string>
+
+    <string name="pref_encrypt_strict_mode_title">Stricte mode</string>
+    <string name="pref_encrypt_strict_mode_summary">le déchiffrement peut seulement être fait avec la clé. Perdez la clé et le message sera impossible.</string>
+
+    <string name="pref_encrypt_overwrite_file_title">Crypter écrase à destination</string>
+    <string name="pref_encrypt_overwrite_file_summary">cryptage fichier, si un fichier avec le même nom existe à destination, il sera écrasé</string>
+
+    <string name="pref_encrypt_file_name_title">Crypter nom</string>
+    <string name="pref_encrypt_file_name_summary">cryptage fichier, le nom du fichier sera crypté</string>
+
+    <string name="pref_encrypt_add_time_and_date_to_file_name_title">Ajouter date et heure au nom</string>
+    <string name="pref_encrypt_add_time_and_date_to_file_name_summary">cryptage fichier, date et heure seront ajouté au nom du fichier</string>
+
+    <string name="pref_encrypt_delete_file_original_title">Supprimer le fichier original</string>
+    <string name="pref_encrypt_delete_file_original_summary">cryptage fichier, le fichier original sera supprimé à la fin du cryptage (si supporté par l\'appareil)</string>
+
+    <string name="pref_decrypt_overwrite_file_title">Décryptage écrase à destination</string>
+    <string name="pref_decrypt_overwrite_file_summary">décryptage fichier, si un fichier avec le même nom existe à destination, il sera écrasé</string>
+
+    <string name="pref_decrypt_delete_file_title">Supprimer le fichier crypté</string>
+    <string name="pref_decrypt_delete_file_summary">décryptage fichier, le fichier crypté sera supprimé à la fin du décryptage (si supporté par l\'appareil)</string>
+
+    <string name="pref_encrypt_sign_text_title">Signer le chiffrement</string>
+    <string name="pref_encrypt_sign_text_summary">cryptage texte, le chiffrement est signé</string>
+
+    <string name="pref_encrypt_add_deeplink_to_text_title">Préfixer avec lien</string>
+    <string name="pref_encrypt_add_deeplink_to_text_summary">cryptage texte, préfixer avec le liens de l\'application quand le text est copié ou partagé</string>
+
+    <string name="lbl_share_title">Partager</string>
+    <string name="lbl_scan_title">Scanner</string>
+    <string name="lbl_type_encrypted_key">Clé chiffré</string>
+    <string name="lbl_type_public_key">Clé public</string>
+    <string name="lbl_type_encrypted_text">Text chiffré</string>
+
+    <string name="chk_encrypt_file_name">crypter nom du fichier</string>
+    <string name="chk_encrypt_add_date_time_to_file_name">ajouter date au nom du fichier</string>
+    <string name="chk_decrypt_overwrite_file">écraser fichier décrypté</string>
+    <string name="chk_encrypt_overwrite_file">écraser fichier crypté</string>
+    <string name="chk_encrypt_delete_original">supprimer fichier original</string>
+    <string name="chk_decrypt_delete_encrypted">supprimer fichier crypté</string>
+    <string name="chk_transfer_ownership">transfert de propriété</string>
+    <string name="chk_encrypt_sign_text">signer chiffrement</string>
+    <string name="chk_encrypt_add_deeplink_to_text">préfixer avec lien d\'application</string>
+
+    <string name="frm_outer_file_name_select">Nom du fichier</string>
+    <string name="frm_inner_file_name_select">selectionner fichier</string>
+
+    <string name="lbl_folder_name">nom du dossier</string>
+    <string name="lbl_file_name">nom du fichier</string>
+
+    <string name="lbl_result_progress_not_started">…</string>
+    <string name="lbl_result_progressing">Progressing…</string>
+    <string name="lbl_result_progress_done">Terminé</string>
+    <string name="lbl_result_progress_failed">Echéc</string>
+
+    <string name="sep_progress">progression</string>
+
+    <string name="frm_outer_crypt_password">Password</string>
+    <string name="frm_inner_crypt_password">password</string>
+
+    <string name="frm_outer_alias">Alias</string>
+    <string name="frm_inner_alias">alias</string>
+
+    <string name="frm_outer_public_key">Clé publique</string>
+    <string name="frm_inner_public_key">clé Publique</string>
+
+    <string name="frm_outer_shared_key">Clé partagé</string>
+    <string name="frm_inner_shared_key">clé Partagé</string>
+
+    <string name="chk_nullify_password">Nullifier password, uniquement la clé est retenu.</string>
+    <string name="chk_strict_mode">Stricte mode, uniquement la clé peut déchiffrer.</string>
+    <string name="lbl_no_keys">Aucune clé</string>
+    <string name="lbl_final_deletion_confirmation_description">Êtes-vous sûre? La suppression est définitive, aucune récupération n\'est possible</string>
+    <string name="lbl_keystore_delete_title">Supprimer keystore</string>
+    <string name="lbl_clear_history_file_title">Supprimer l\'historique des fichiers</string>
+    <string name="lbl_missing_file_title">Fichier manquant</string>
+
+    <string name="lbl_open_keystore_title">Ouvrir keystore</string>
+    <string name="lbl_create_keystore_title">Créer keystore</string>
+    <string name="lbl_share_key_title">Partager clé</string>
+    <string name="lbl_create_key_title">Créer clé</string>
+    <string name="lbl_edit_key_title">Editer clé</string>
+    <string name="lbl_import_key_title">Importer clé</string>
+    <string name="lbl_select_key_title">Sélectionner clé</string>
+    <string name="lbl_select_key_to_share_title">Sélectionner clé à partager</string>
+
+    <string name="lbl_import_key_step_share">1-Partager clé public</string>
+    <string name="lbl_import_key_step_retrieve">2-Récupérer clé chiffré</string>
+    <string name="lbl_export_key_step_share">2-Partager clé chiffré</string>
+    <string name="lbl_export_key_step_retrieve">1-Récupérer clé public</string>
+
+    <string name="lbl_import_key_confirm_success">- Déchiffrage clé succés</string>
+    <string name="lbl_import_key_confirm_rename">- Renomer clé si nécessaire</string>
+
+    <string name="lbl_operation_encrypt">chiffrement</string>
+    <string name="lbl_operation_decrypt">déchiffrement</string>
+    <string name="lbl_result_succeed">succés</string>
+    <string name="lbl_result_failed">échec</string>
+    <string name="lbl_result_aborted">interrompu</string>
+
+    <string name="lbl_sep_encrypt_file">fichier chiffrement</string>
+    <string name="lbl_sep_decrypt_file">fichier déchiffrement</string>
+    <string name="lbl_sep_encrypt_text">text chiffrement</string>
+    <string name="lbl_sep_option">option</string>
+    <string name="lbl_sep_warning">attention</string>
+
+    <string name="btn_confirm">Confirmer</string>
+    <string name="btn_cancel">Annuler</string>
+    <string name="btn_import">Importer</string>
+    <string name="btn_import_key_shared">Importer une clé partagée</string>
+    <string name="btn_export_key_all">Exporter toutes les clés</string>
+    <string name="btn_import_key_all">Importer toutes les clés</string>
+    <string name="btn_create_key">Créer clé</string>
+
+    <string name="lbl_key_owned">clés propriétaires:</string>
+    <string name="lbl_key_owned_not">clés non propriétaires:</string>
+    <string name="lbl_key_owned_not_warning">les clés pour lesquelles vous n\'êtes pas propriétaires peuvent uniquement être restaurées sur le même appareil. Elles ne seront pas restaurées sur un appareil different. Vous devrez demander à nouveau aux propriétaires une copie.</string>
+
+    <string name="btn_ie_menu_format_file_text">Fichier texte</string>
+    <string name="btn_ie_menu_format_file_gif">Fichier gif</string>
+    <string name="btn_ie_menu_format_text">Texte</string>
+    <string name="lbl_ie_menu_format_title">Partager avec format?</string>
+    <string name="chk_remember_my_choice">se souvenir de mon choix</string>
+
+    <string name="share_encrypt_subject">fichier crypté </string>
+    <string name="share_encrypt_link">\n\n\nApplication link: </string>
+
+    <string name="btn_file_cipher_abort_txt">Interrompre</string>
+    <array name="btn_file_encrypt_start_txt">
+        <item>Crypter</item>
+        <item>Encrypté</item>
+        <item>Crypter échec</item>
+        <item>Crypter annulé</item>
+    </array>
+    <array name="btn_file_decrypt_start_txt">
+        <item>Décrypter</item>
+        <item>Décrypté</item>
+        <item>Décrypter échec</item>
+        <item>Décrypter annulé</item>
+    </array>
+
+    <string name="lbl_banner_default">Achetez la version sans publicités ;)</string>
+    <string name="btn_maybe_later">Plus tard</string>
+    <string name="btn_buy">Acheter</string>
+    <string name="btn_close">Fermer</string>
+    <string name="chk_do_not_show_again">Ne plus montrer</string>
+    <string name="btn_ok">Ok</string>
+    <string name="chk_already_done">already done</string>
+
+    <string name="lbl_billing_error">Achat interrompu</string>
+
+    <string name="validator_keystore_locked">keystore est vérouillé</string>
+
+    <string name="validator_export_key_public_invalid">clé invalide</string>
+    <string name="validator_export_key_shared_not_owner">pas propriétaire de la clé</string>
+    <string name="validator_export_key_shared_fail_to_encrypt">échec chiffrement clé</string>
+    <string name="validator_import_key_shared_retrieve_key_agreement_failed">clé partagée expirée</string>
+    <string name="validator_import_key_shared_verify_failed">échec déchiffrement clé</string>
+    <string name="validator_import_key_shared_already_exist">cette clé existe déjà</string>
+
+    <string name="lbl_password_keystore">Keystore password</string>
+    <string name="lbl_password_exported_keys">Clés exportées password</string>
+
+    <string name="validator_credential_wrong">identifiant erroné</string>
+
+    <string name="recycler_swipe_delete">Supprimer</string>
+    <string name="lbl_key_created_the">Créée le:</string>
+    <string name="lbl_key_edit_am_i_owner">Propriétaire:</string>
+    <string name="lbl_key_import_am_i_owner">Propriété accordé:</string>
+    <string name="lbl_key_edit_created_by_app">Créée par cette application:</string>
+    <string name="lbl_key_edit_yes">oui</string>
+    <string name="lbl_key_edit_no">non</string>
+    <string name="lbl_key_encrypted_the">Crypté le:</string>
+    <string name="lbl_key_method_title">Méthode:</string>
+
+    <string name="lbl_exception_create_file">échec création fichier</string>
+    <string name="lbl_exception_export_keys">échec export données</string>
+    <string name="lbl_exception_import_keys">échec import données</string>
+    <string name="lbl_export_keys_title">Exporter toutes les clées</string>
+    <string name="lbl_import_keys_title">Importer toutes les clées</string>
+    <string-array name="db_export_column_name">
+        <item>index</item>
+        <item>alias</item>
+        <item>id</item>
+        <item>créée</item>
+        <item>password</item>
+        <item>key</item>
+    </string-array>
+
+</resources>

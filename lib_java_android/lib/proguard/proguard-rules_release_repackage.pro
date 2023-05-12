@@ -1,0 +1,4 @@
+-repackageclasses 'android.oav'
+-allowaccessmodification
+-renamesourcefileattribute SourceFile
+-printmapping mapping.txt

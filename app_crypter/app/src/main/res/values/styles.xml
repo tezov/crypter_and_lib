@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<resources>
+
+    <declare-styleable name="LedState">
+        <attr name="state_neutral" format="boolean" />
+        <attr name="state_busy" format="boolean" />
+        <attr name="state_succeed" format="boolean" />
+        <attr name="state_failed" format="boolean" />
+    </declare-styleable>
+
+    <!-- THEME -->
+    <style name="ThemeApplication" parent="ThemeNoActionBarLight">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorSecondaryLight</item>
+        <item name="colorSecondaryDark">@color/colorPrimaryDark</item>
+
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccentLight">@color/colorAccentLight</item>
+        <item name="colorFaint">@color/colorFaint</item>
+        <item name="colorFaintDark">@color/colorFaintDark</item>
+        <item name="colorError">@color/colorError</item>
+
+        <item name="colorText">@drawable/state_text_color</item>
+        <item name="android:textColor">@drawable/state_text_color</item>
+        <item name="colorHint">@color/colorHint</item>
+        <item name="android:textColorHint">@color/colorHint</item>
+
+        <item name="colorBackground">@color/colorBackground</item>
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="navigationToolbarTheme">@style/ThemeCrypterToolbarBottom</item>
+        <item name="dialogPickerRecyclerWheelTheme">@style/ThemeCrypterDialogPickerRecyclerWheel
+        </item>
+    </style>
+
+    <!-- TOOLBAR BOTTOM -->
+    <style name="ThemeCrypterToolbarBottom" parent="ThemeToolbarBottom">
+        <item name="itemIconTint">@drawable/toolbar_bottom_color</item>
+        <item name="itemTextColor">@drawable/toolbar_bottom_color</item>
+        <item name="itemTextAppearanceActive">?attr/styleTextNorm</item>
+        <item name="itemTextAppearanceInactive">?attr/styleTextNorm</item>
+    </style>
+
+    <!-- DIALOG PICKER RECYCLER WHEEL-->
+    <style name="ThemeCrypterDialogPickerRecyclerWheel" parent="ThemeDialogPickerRecyclerWheel">
+        <item name="layoutContentStyle">@style/StyleCryptoDialogPickerRecycler_Content</item>
+    </style>
+
+    <style name="StyleCryptoDialogPickerRecycler_Content" parent="StyleDialogPickerRecycler_Content">
+        <item name="android:textAppearance">@style/TxtNormBig</item>
+        <item name="android:textColor">@null</item>
+        <item name="android:padding">?attr/dimPaddingElement_6</item>
+    </style>
+
+    <style name="TxtNormBig" parent="TxtNorm">
+        <item name="android:textColor">?attr/colorText</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/tpl_activity_d_tbc_tbb_overlap">
+
+    <item
+        android:id="@+id/mn_keystore_close"
+        android:title="@string/mn_keystore_close"
+        android:visible="false"
+        app:iconTint="@color/White"
+        app:showAsAction="collapseActionView" />
+
+    <item
+        android:id="@+id/mn_keystore_delete"
+        android:title="@string/mn_keystore_delete"
+        android:visible="false"
+        app:iconTint="@color/White"
+        app:showAsAction="collapseActionView" />
+
+    <item
+        android:id="@+id/mn_history_file_delete"
+        android:title="@string/mn_history_file_delete"
+        android:visible="false"
+        app:iconTint="@color/White"
+        app:showAsAction="collapseActionView" />
+
+    <item
+        android:id="@+id/mn_setting"
+        android:title="@string/mn_setting"
+        app:iconTint="@color/White"
+        app:showAsAction="collapseActionView" />
+
+</menu>
+

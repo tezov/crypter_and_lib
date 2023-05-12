@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<com.tezov.lib_java_android.ui.layout.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_modal_bg"
+    android:padding="?attr/dimPaddingRoot_3">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawablePadding="?attr/dimPaddingElement_6"
+        android:elevation="0dp"
+        android:textAppearance="?attr/styleTextBig"
+        app:layout_constraintEnd_toStartOf="@+id/btn_action"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:drawableStart="@drawable/ic_dot3_24dp"
+        tools:text="Title" />
+
+    <com.tezov.lib_java_android.ui.component.plain.ButtonIconMaterial
+        android:id="@+id/btn_action"
+        style="@style/ButtonFlatIconRound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        app:icon="@drawable/ic_add_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.tezov.lib_java_android.ui.layout.FrameLayout
+        android:id="@+id/sep_header"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="?attr/colorAccentLight"
+        android:elevation="0dp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_action"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_title"
+        app:layout_constraintWidth_percent="0.80" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_helper"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawablePadding="?attr/dimPaddingElement_6"
+        android:elevation="0dp"
+        android:text="Helper"
+        android:textAppearance="?attr/styleTextHelper"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/btn_action"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sep_header"
+        tools:visibility="visible" />
+
+    <com.tezov.lib_java_android.ui.layout.FrameFlipperLayout
+        android:id="@+id/container_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        android:paddingTop="?attr/dimPaddingElement_6"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toTopOf="@+id/txt_filter"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_helper">
+
+        <com.tezov.lib_java_android.ui.layout.FrameLayout
+            android:id="@id/frame_substitute"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <com.tezov.lib_java_android.ui.recycler.RecyclerListLinear
+            android:id="@id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:background="@color/LightBlue"
+            tools:layout_height="150dp" />
+    </com.tezov.lib_java_android.ui.layout.FrameFlipperLayout>
+
+    <com.tezov.lib_java_android.ui.component.plain.EditTextWithIconAction
+        android:id="@+id/txt_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_search_24dp"
+        android:elevation="0dp"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingTop="?attr/dimPaddingElement_6"
+        android:textAppearance="?attr/styleTextNorm"
+        app:layout_constraintBottom_toTopOf="@+id/checkbox"
+        tools:text="search text" />
+
+    <com.tezov.lib_java_android.ui.component.plain.CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="remember my choice" />
+
+</com.tezov.lib_java_android.ui.layout.ConstraintLayout>

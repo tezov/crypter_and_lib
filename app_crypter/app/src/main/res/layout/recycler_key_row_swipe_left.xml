@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<com.tezov.lib_java_android.ui.layout.FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Red"
+        android:gravity="center_vertical|end"
+        android:orientation="horizontal"
+        android:paddingStart="?attr/dimPaddingElement_1"
+        android:paddingEnd="?attr/dimPaddingElement_1">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="?attr/styleTextBig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/recycler_swipe_delete"
+            android:textColor="@color/White" />
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_delete_24dp"
+            app:tint="@color/White" />
+
+    </LinearLayout>
+</com.tezov.lib_java_android.ui.layout.FrameLayout>
+

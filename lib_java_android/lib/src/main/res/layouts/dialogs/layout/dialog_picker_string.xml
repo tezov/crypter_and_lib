@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="?attr/layoutRootStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="?attr/dialogPickerStringTheme">
+
+    <com.tezov.lib_java_android.ui.component.plain.EditTextWithIconAction
+        android:id="@+id/edit_text"
+        style="?attr/layoutContentStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_edit_24dp"
+        android:inputType="text"
+        android:maxLines="1"
+        tools:background="@color/Transparent"
+        tools:text="text" />
+</FrameLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="32"
+    android:viewportHeight="32">
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M28.5,31L3.5,31A3.5,3.5 0,0 1,0 27.5v-1A3.5,3.5 0,0 1,3.5 23h25A3.5,3.5 0,0 1,32 26.5v1A3.5,3.5 0,0 1,28.5 31ZM3.5,25A1.5,1.5 0,0 0,2 26.5v1A1.5,1.5 0,0 0,3.5 29h25A1.5,1.5 0,0 0,30 27.5v-1A1.5,1.5 0,0 0,28.5 25Z" />
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M28.5,20L3.5,20A3.5,3.5 0,0 1,0 16.5v-1A3.5,3.5 0,0 1,3.5 12h25A3.5,3.5 0,0 1,32 15.5v1A3.5,3.5 0,0 1,28.5 20ZM3.5,14A1.5,1.5 0,0 0,2 15.5v1A1.5,1.5 0,0 0,3.5 18h25A1.5,1.5 0,0 0,30 16.5v-1A1.5,1.5 0,0 0,28.5 14Z" />
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M28.5,9H3.5A3.5,3.5 0,0 1,0 5.5v-1A3.5,3.5 0,0 1,3.5 1h25A3.5,3.5 0,0 1,32 4.5v1A3.5,3.5 0,0 1,28.5 9ZM3.5,3A1.5,1.5 0,0 0,2 4.5v1A1.5,1.5 0,0 0,3.5 7h25A1.5,1.5 0,0 0,30 5.5v-1A1.5,1.5 0,0 0,28.5 3Z" />
+</vector>

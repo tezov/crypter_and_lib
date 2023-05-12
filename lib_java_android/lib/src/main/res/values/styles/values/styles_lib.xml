@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <declare-styleable name="Theme_StyleText_lib">
+        <attr name="styleTextButton" format="reference" />
+        <attr name="styleTextGiant" format="reference" />
+        <attr name="styleTextHelper" format="reference" />
+        <attr name="styleTextLabel" format="reference" />
+        <attr name="styleTextLabelSmall" format="reference" />
+        <attr name="styleTextNorm" format="reference" />
+        <attr name="styleTextBig" format="reference" />
+        <attr name="styleTextSmall" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="Theme_Attribute_lib">
+        <attr name="colorSecondaryDark" format="reference" />
+        <attr name="colorFaint" format="reference" />
+        <attr name="colorAccentLight" format="reference" />
+        <attr name="colorFaintDark" format="reference" />
+        <attr name="colorHint" format="reference" />
+        <attr name="colorText" format="reference" />
+        <attr name="colorTextTitle" format="reference" />
+        <attr name="colorTextMessage" format="reference" />
+        <attr name="colorTextHelper" format="reference" />
+        <attr name="colorBackground" format="reference" />
+        <attr name="colorBackgroundBorder" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="Theme_LayoutStyle_lib">
+        <attr name="layoutRootStyle" format="reference" />
+        <attr name="layoutHeaderStyle" format="reference" />
+        <attr name="layoutBodyStyle" format="reference" />
+        <attr name="layoutContentStyle" format="reference" />
+        <attr name="layoutElementStyle" format="reference" />
+        <attr name="layoutAlternateStyle" format="reference" />
+        <attr name="layoutModalStyle" format="reference" />
+        <attr name="layoutOptionStyle" format="reference" />
+        <attr name="layoutFooterStyle" format="reference" />
+        <attr name="layoutBorderStyle" format="reference" />
+        <attr name="layoutTopStyle" format="reference" />
+        <attr name="layoutBottomStyle" format="reference" />
+        <attr name="layoutStartStyle" format="reference" />
+        <attr name="layoutEndStyle" format="reference" />
+        <attr name="layoutCenterStyle" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="Theme_LayoutTheme_lib">
+        <attr name="layoutRootTheme" format="reference" />
+        <attr name="layoutHeaderTheme" format="reference" />
+        <attr name="layoutBodyTheme" format="reference" />
+        <attr name="layoutContentTheme" format="reference" />
+        <attr name="layoutElementTheme" format="reference" />
+        <attr name="layoutAlternateTheme" format="reference" />
+        <attr name="layoutModalTheme" format="reference" />
+        <attr name="layoutOptionTheme" format="reference" />
+        <attr name="layoutFooterTheme" format="reference" />
+        <attr name="layoutBorderTheme" format="reference" />
+        <attr name="layoutTopTheme" format="reference" />
+        <attr name="layoutBottomTheme" format="reference" />
+        <attr name="layoutStartTheme" format="reference" />
+        <attr name="layoutEndTheme" format="reference" />
+        <attr name="layoutCenterTheme" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="Theme_ComponentStyle_lib">
+        <attr name="textInputLayoutStyle" format="reference" />
+        <attr name="textInputStyle" format="reference" />
+        <attr name="imageViewStyle" format="reference" />
+        <attr name="seekBarStyle" format="reference" />
+        <attr name="seekBarCursorStyle" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="Theme_ComponentTheme_lib">
+        <attr name="toolbarTheme" format="reference" />
+        <attr name="drawerTheme" format="reference" />
+        <attr name="navigationToolbarTheme" format="reference" />
+        <attr name="tabLayoutTheme" format="reference" />
+        <attr name="textInputTheme" format="reference" />
+        <attr name="infoColorTheme" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="Theme_InfoColor_lib">
+        <attr name="color_failed" format="reference" />
+        <attr name="color_succeed" format="reference" />
+        <attr name="color_neutral" format="reference" />
+        <attr name="color_info" format="reference" />
+        <attr name="color_warning" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="Theme_DialogPicker_lib">
+        <attr name="dialogPickerDataWheelTheme" format="reference" />
+        <attr name="dialogPickerDateTheme" format="reference" />
+        <attr name="dialogPickerRecyclerWheelTheme" format="reference" />
+        <attr name="dialogPickerRecyclerWheelMultipleTheme" format="reference" />
+        <attr name="dialogPickerStringTheme" format="reference" />
+        <attr name="dialogPickerStringUnitTheme" format="reference" />
+    </declare-styleable>
+
+    <!-- TEXT -->
+    <style name="TxtGiant" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">?attr/colorText</item>
+        <item name="android:textSize">@dimen/dimText_giant</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TxtBig" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">?attr/colorText</item>
+        <item name="android:textSize">@dimen/dimText_big</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TxtNorm" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">?attr/colorText</item>
+        <item name="android:textSize">@dimen/dimText_norm</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TxtLabel" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">?attr/colorText</item>
+        <item name="android:textSize">@dimen/dimText_label</item>
+        <item name="android:textStyle">italic|bold</item>
+    </style>
+
+    <style name="TxtSmall" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">?attr/colorText</item>
+        <item name="android:textSize">@dimen/dimText_small</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="TxtLabelSmall" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">?attr/colorText</item>
+        <item name="android:textSize">@dimen/dimText_small</item>
+        <item name="android:textStyle">italic|bold</item>
+    </style>
+
+    <style name="TxtHelper" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">?attr/colorText</item>
+        <item name="android:textSize">@dimen/dimText_helper</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="TxtButton" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">?attr/colorText</item>
+        <item name="android:textSize">@dimen/dimText_button</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- THEME -->
+    <style name="ThemeNoActionBarLight.Base" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="dimPaddingRoot_1">@dimen/dimPaddingRoot_1</item>
+        <item name="dimPaddingRoot_2">@dimen/dimPaddingRoot_2</item>
+        <item name="dimPaddingRoot_3">@dimen/dimPaddingRoot_3</item>
+        <item name="dimPaddingRoot_4">@dimen/dimPaddingRoot_4</item>
+
+        <item name="dimPaddingElement_1">@dimen/dimPaddingElement_1</item>
+        <item name="dimPaddingElement_2">@dimen/dimPaddingElement_2</item>
+        <item name="dimPaddingElement_3">@dimen/dimPaddingElement_3</item>
+        <item name="dimPaddingElement_4">@dimen/dimPaddingElement_4</item>
+        <item name="dimPaddingElement_5">@dimen/dimPaddingElement_5</item>
+        <item name="dimPaddingElement_6">@dimen/dimPaddingElement_6</item>
+
+        <item name="dimPaddingImage_1">@dimen/dimPaddingImage_1</item>
+        <item name="dimPaddingImage_2">@dimen/dimPaddingImage_2</item>
+        <item name="dimPaddingImage_3">@dimen/dimPaddingImage_3</item>
+
+        <item name="dimPaddingTabulation_1">@dimen/dimPaddingTabulation_1</item>
+        <item name="dimPaddingTabulation_2">@dimen/dimPaddingTabulation_2</item>
+        <item name="dimPaddingTabulation_3">@dimen/dimPaddingTabulation_3</item>
+        <item name="dimPaddingTabulation_4">@dimen/dimPaddingTabulation_4</item>
+        <item name="dimPaddingTabulation_5">@dimen/dimPaddingTabulation_5</item>
+        <item name="dimPaddingTabulation_6">@dimen/dimPaddingTabulation_6</item>
+
+        <item name="dimBorder_1">@dimen/dimBorder_1</item>
+        <item name="dimBorder_2">@dimen/dimBorder_2</item>
+        <item name="dimBorder_3">@dimen/dimBorder_3</item>
+        <item name="dimBorder_4">@dimen/dimBorder_4</item>
+        <item name="dimBorder_5">@dimen/dimBorder_5</item>
+
+        <item name="dimElevation_1">@dimen/dimElevation_1</item>
+        <item name="dimElevation_2">@dimen/dimElevation_2</item>
+        <item name="dimElevation_3">@dimen/dimElevation_3</item>
+        <item name="dimElevation_4">@dimen/dimElevation_4</item>
+
+        <item name="dimCorner_1">@dimen/dimCorner_1</item>
+        <item name="dimCorner_2">@dimen/dimCorner_2</item>
+        <item name="dimCorner_3">@dimen/dimCorner_3</item>
+
+        <item name="styleTextButton">@style/TxtButton</item>
+        <item name="styleTextGiant">@style/TxtGiant</item>
+        <item name="styleTextBig">@style/TxtBig</item>
+        <item name="styleTextNorm">@style/TxtNorm</item>
+        <item name="styleTextLabel">@style/TxtLabel</item>
+        <item name="styleTextSmall">@style/TxtSmall</item>
+        <item name="styleTextLabelSmall">@style/TxtLabelSmall</item>
+        <item name="styleTextHelper">@style/TxtHelper</item>
+    </style>
+
+    <style name="ThemeTransparent" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/Transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <!--        <item name="android:windowIsFloating">true</item>-->
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:colorBackground">@null</item>
+        <item name="colorBackground">@null</item>
+    </style>
+
+    <style name="ThemeNoActionBarLight" parent="ThemeNoActionBarLight.Base">
+        <item name="toolbarTheme">@style/ThemeToolbar</item>
+        <item name="navigationToolbarTheme">@style/ThemeToolbarBottom</item>
+        <item name="drawerTheme">@style/ThemeDrawer</item>
+        <item name="tabLayoutTheme">@style/ThemeTabLayout</item>
+        <item name="textInputTheme">@style/ThemeTextInput</item>
+        <item name="infoColorTheme">@style/ThemeInfoColor</item>
+
+        <item name="buttonStyle">@style/StyleButtonFlatText</item>
+        <item name="checkboxStyle">@style/StyleCheckbox</item>
+        <item name="android:spinnerStyle">@style/StyleSpinner</item>
+
+        <item name="dialogPickerRecyclerWheelTheme">@style/ThemeDialogPickerRecyclerWheel</item>
+        <item name="dialogPickerRecyclerWheelMultipleTheme">
+            @style/ThemeDialogPickerRecyclerWheelMultiple
+        </item>
+        <item name="dialogPickerDateTheme">@style/ThemeDialogPickerDate</item>
+        <item name="dialogPickerDataWheelTheme">@style/ThemeDialogPickerDataWheel</item>
+        <item name="dialogPickerStringTheme">@style/ThemeDialogPickerString</item>
+        <item name="dialogPickerStringUnitTheme">@style/ThemeDialogPickerStringUnit</item>
+    </style>
+
+    <!-- DIALOG -->
+    <style name="DialogNoAnimation">
+        <item name="android:windowEnterAnimation">@null</item>
+        <item name="android:windowExitAnimation">@null</item>
+    </style>
+
+    <!-- TAB LAYOUT -->
+    <style name="ThemeTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">?attr/colorAccent</item>
+        <item name="tabIndicatorHeight">@dimen/dimBorder_4</item>
+        <item name="tabBackground">?attr/colorAccentLight</item>
+        <item name="tabSelectedTextColor">?attr/colorPrimary</item>
+        <item name="tabTextAppearance">@style/StyleTabLayout_TextAppearance</item>
+        <item name="tabInlineLabel">true</item>
+        <item name="tabMaxWidth">0dp</item>
+        <item name="tabGravity">fill</item>
+        <item name="tabMode">fixed</item>
+    </style>
+
+    <style name="StyleTabLayout_TextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/dimText_big</item>
+        <item name="android:textColor">?attr/colorPrimaryVariant</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <!-- TOOLBAR -->
+    <style name="ThemeToolbar" parent="Widget.MaterialComponents.Toolbar.Primary">
+        <item name="android:elevation">0dp</item>
+        <item name="elevation">0dp</item>
+        <item name="android:contentInsetLeft">0dp</item>
+        <item name="android:contentInsetStart">0dp</item>
+        <item name="android:contentInsetRight">0dp</item>
+        <item name="android:contentInsetEnd">0dp</item>
+        <item name="contentInsetLeft">0dp</item>
+        <item name="contentInsetStart">0dp</item>
+        <item name="contentInsetRight">0dp</item>
+        <item name="contentInsetEnd">0dp</item>
+    </style>
+
+    <!-- DRAWER NAVIGATION -->
+    <style name="ThemeDrawer">
+        <item name="navigationViewStyle">@style/StyleDrawer_Item</item>
+    </style>
+
+    <style name="StyleDrawer_Item" parent="Widget.Design.NavigationView">
+        <item name="android:background">?attr/colorPrimaryVariant</item>
+        <item name="itemTextColor">?attr/colorText</item>
+    </style>
+
+    <!-- BOTTOM NAVIGATION -->
+    <style name="ThemeToolbarBottom" parent="@style/Widget.MaterialComponents.BottomNavigationView.PrimarySurface">
+        <item name="android:background">?attr/colorPrimaryVariant</item>
+        <item name="itemIconTint">?attr/colorText</item>
+        <item name="itemTextColor">?attr/colorText</item>
+        <item name="itemTextAppearanceActive">?attr/styleTextLabel</item>
+        <item name="itemTextAppearanceInactive">?attr/styleTextLabel</item>
+    </style>
+
+    <!-- EDIT TEXT LAYOUT -->
+    <style name="ThemeTextInput">
+        <item name="textInputLayoutStyle">@style/StyleTextInput_Layout</item>
+        <item name="textInputStyle">@style/StyleTextInput_EditText</item>
+        <item name="seekBarStyle">@style/StyleSeekBar</item>
+        <item name="seekBarCursorStyle">@style/StyleSeekBarCursor</item>
+    </style>
+
+    <style name="StyleTextInput_Layout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hintTextAppearance">?attr/styleTextHelper</item>
+        <item name="errorTextAppearance">?attr/styleTextSmall</item>
+        <item name="android:textColorHint">@null</item>
+    </style>
+
+    <style name="StyleTextInput_EditText">
+        <item name="android:textAppearance">?attr/styleTextNorm</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:textColor">@null</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:inputType">text</item>
+        <item name="android:paddingBottom">8sp</item>
+        <item name="android:paddingTop">@null</item>
+    </style>
+
+    <!-- STATUS PARAM COLOR -->
+    <style name="ThemeInfoColor">
+        <item name="color_failed">@style/StyleInfoColor_Failed</item>
+        <item name="color_succeed">@style/StyleInfoColor_Succeed</item>
+        <item name="color_neutral">@style/StyleInfoColor_Neutral</item>
+        <item name="color_info">@style/StyleInfoColor_Info</item>
+        <item name="color_warning">@style/StyleInfoColor_Warning</item>
+    </style>
+
+    <style name="StyleInfoColor_Failed">
+        <item name="colorTextTitle">@color/Black</item>
+        <item name="colorTextMessage">@color/Black</item>
+        <item name="colorTextHelper">@color/DarkGray</item>
+        <item name="colorBackground">@color/Red</item>
+        <item name="colorBackgroundBorder">@color/DarkRed</item>
+    </style>
+
+    <style name="StyleInfoColor_Succeed">
+        <item name="colorTextTitle">@color/Black</item>
+        <item name="colorTextMessage">@color/Black</item>
+        <item name="colorTextHelper">@color/DarkGray</item>
+        <item name="colorBackground">@color/MediumSeaGreen</item>
+        <item name="colorBackgroundBorder">@color/DarkGreen</item>
+    </style>
+
+    <style name="StyleInfoColor_Neutral">
+        <item name="colorTextTitle">@color/Black</item>
+        <item name="colorTextMessage">@color/Black</item>
+        <item name="colorTextHelper">@color/DarkGray</item>
+        <item name="colorBackground">@color/Gray</item>
+        <item name="colorBackgroundBorder">@color/DimGray</item>
+    </style>
+
+    <style name="StyleInfoColor_Info">
+        <item name="colorTextTitle">@color/Black</item>
+        <item name="colorTextMessage">@color/Black</item>
+        <item name="colorTextHelper">@color/DarkGray</item>
+        <item name="colorBackground">@color/MediumSlateBlue</item>
+        <item name="colorBackgroundBorder">@color/DarkBlue</item>
+    </style>
+
+    <style name="StyleInfoColor_Warning">
+        <item name="colorTextTitle">@color/Black</item>
+        <item name="colorTextMessage">@color/Black</item>
+        <item name="colorTextHelper">@color/DarkGray</item>
+        <item name="colorBackground">@color/DarkOrange</item>
+        <item name="colorBackgroundBorder">@color/Orange</item>
+    </style>
+
+    <!-- DIALOG PICKER RECYCLER WHEEL-->
+    <style name="ThemeDialogPickerRecyclerWheel">
+        <item name="layoutRootStyle">@style/StyleDialogPickerRecycler_Root</item>
+        <item name="layoutElementStyle">@style/StyleDialogPickerRecycler_Element</item>
+        <item name="layoutContentStyle">@style/StyleDialogPickerRecycler_Content</item>
+        <item name="layoutOptionStyle">@style/StyleDialogPickerRecycler_Option</item>
+    </style>
+
+    <style name="StyleDialogPickerRecycler_Root">
+        <item name="android:padding">?attr/dimPaddingRoot_4</item>
+    </style>
+
+    <style name="StyleDialogPickerRecycler_Element">
+        <item name="android:background">?attr/colorFaint</item>
+    </style>
+
+    <style name="StyleDialogPickerRecycler_Content">
+        <item name="android:textAppearance">?attr/styleTextNorm</item>
+        <item name="android:textColor">@null</item>
+        <item name="android:padding">?attr/dimPaddingElement_6</item>
+    </style>
+
+    <style name="StyleDialogPickerRecycler_Option">
+        <item name="android:textViewStyle">?attr/styleTextNorm</item>
+        <item name="android:padding">?attr/dimPaddingElement_3</item>
+        <item name="android:background">?attr/colorFaintDark</item>
+    </style>
+    <!-- DIALOG PICKER RECYCLER WHEEL MULTIPLE-->
+    <style name="ThemeDialogPickerRecyclerWheelMultiple">
+        <item name="layoutRootStyle">@style/StyleDialogPickerRecyclerMultiple_Root</item>
+        <item name="layoutElementStyle">@style/StyleDialogPickerRecyclerMultiple_Element</item>
+        <item name="layoutContentStyle">@style/StyleDialogPickerRecyclerMultiple_Content</item>
+    </style>
+
+    <style name="StyleDialogPickerRecyclerMultiple_Root">
+        <item name="android:padding">?attr/dimPaddingRoot_4</item>
+        <item name="android:background">?attr/colorFaint</item>
+    </style>
+
+    <style name="StyleDialogPickerRecyclerMultiple_Element">
+
+    </style>
+
+    <style name="StyleDialogPickerRecyclerMultiple_Content">
+        <item name="android:textAppearance">?attr/styleTextGiant</item>
+        <item name="android:textColor">@null</item>
+        <item name="android:padding">?attr/dimPaddingElement_6</item>
+    </style>
+    <!-- DIALOG PICKER DATA-->
+    <style name="ThemeDialogPickerDataWheel">
+        <item name="android:textSize">@dimen/dimText_giant</item>
+        <item name="android:textStyle">bold|italic</item>
+        <item name="colorControlNormal">?attr/colorAccent</item>
+    </style>
+    <!-- DIALOG PICKER DATE-->
+    <style name="ThemeDialogPickerDate">
+        <item name="android:textSize">@dimen/dimText_giant</item>
+        <item name="android:textStyle">bold|italic</item>
+        <item name="colorControlNormal">?attr/colorAccent</item>
+    </style>
+
+    <!-- DIALOG PICKER STRING-->
+    <style name="ThemeDialogPickerString">
+        <item name="layoutRootStyle">@style/StyleDialogPickerString_Root</item>
+        <item name="layoutContentStyle">@style/StyleDialogPickerString_Content</item>
+    </style>
+
+    <style name="StyleDialogPickerString_Root">
+        <item name="android:background">?attr/colorFaint</item>
+        <item name="android:padding">?attr/dimPaddingRoot_4</item>
+    </style>
+
+    <style name="StyleDialogPickerString_Content">
+        <item name="android:maxLines">1</item>
+        <item name="android:padding">?attr/dimPaddingElement_3</item>
+        <item name="android:textAppearance">?attr/styleTextNorm</item>
+        <item name="android:textColor">@null</item>
+    </style>
+
+    <!-- DIALOG PICKER STRING UNIT-->
+    <style name="ThemeDialogPickerStringUnit">
+        <item name="layoutRootStyle">@style/StyleDialogPickerStringUnit_Root</item>
+        <item name="layoutContentStyle">@style/StyleDialogPickerStringUnit_Content</item>
+        <item name="layoutElementStyle">@style/StyleDialogPickerStringUnit_Element</item>
+        <item name="layoutAlternateStyle">@style/StyleDialogPickerStringUnit_Alternate</item>
+    </style>
+
+    <style name="StyleDialogPickerStringUnit_Root">
+        <item name="android:padding">?attr/dimPaddingRoot_4</item>
+        <item name="android:background">?attr/colorFaint</item>
+    </style>
+
+    <style name="StyleDialogPickerStringUnit_Content">
+        <item name="android:maxLines">1</item>
+        <item name="android:padding">?attr/dimPaddingElement_3</item>
+        <item name="android:textAppearance">?attr/styleTextNorm</item>
+        <item name="android:textColor">@null</item>
+    </style>
+
+    <style name="StyleDialogPickerStringUnit_Element">
+        <item name="android:background">?attr/colorFaint</item>
+    </style>
+
+    <style name="StyleDialogPickerStringUnit_Alternate">
+        <item name="android:textAppearance">?attr/styleTextGiant</item>
+        <item name="android:padding">?attr/dimPaddingElement_6</item>
+        <item name="android:textColor">@null</item>
+    </style>
+
+    <!-- COMPONENTS -->
+    <style name="StyleCheckbox" parent="Widget.MaterialComponents.CompoundButton.CheckBox">
+        <item name="android:textAppearance">?attr/styleTextHelper</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="useMaterialThemeColors">true</item>
+    </style>
+
+    <style name="StyleButtonFlatText" parent="Widget.AppCompat.Button.Borderless.Colored">
+        <item name="android:textAppearance">?attr/styleTextButton</item>
+        <item name="android:textColor">@null</item>
+        <item name="android:background">@drawable/button_border</item>
+    </style>
+
+    <style name="StyleButtonFlatIconText" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textAppearance">?attr/styleTextButton</item>
+        <item name="android:textColor">@null</item>
+        <item name="iconPadding">4dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="iconSize">24dp</item>
+        <item name="iconTint">@color/Black</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:background">@drawable/button_border</item>
+    </style>
+
+    <style name="StyleButtonFlatIconBase" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="iconTint">@color/Black</item>
+        <item name="iconSize">32dp</item>
+        <item name="backgroundTint">@null</item>
+    </style>
+
+    <style name="StyleButtonFlatIconTranslucide" parent="StyleButtonFlatIconBase">
+        <item name="iconSize">36dp</item>
+        <item name="android:background">@color/Transparent</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:minWidth">@null</item>
+        <item name="android:minHeight">@null</item>
+    </style>
+
+    <style name="StyleButtonFlatIcon" parent="StyleButtonFlatIconBase">
+        <item name="android:background">@drawable/button_border</item>
+    </style>
+
+    <style name="ButtonFlatIconRound" parent="StyleButtonFlatIconBase">
+        <item name="android:background">@drawable/button_border_round</item>
+    </style>
+
+    <style name="StyleButtonIcon" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="iconTint">?attr/colorAccent</item>
+    </style>
+
+    <style name="StyleSeekBar" parent="Widget.AppCompat.SeekBar">
+        <item name="android:thumbTint">?attr/colorPrimaryDark</item>
+    </style>
+
+    <style name="StyleSeekBarCursor" parent="StyleSeekBar">
+        <item name="android:progressTint">@color/Transparent</item>
+        <item name="android:progressBackgroundTint">@color/Black</item>
+    </style>
+
+    <style name="StyleSpinner">
+        <item name="android:background">@drawable/spinner_background</item>
+        <item name="android:paddingStart">2dp</item>
+        <item name="android:paddingEnd">18dp</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+        <item name="android:popupBackground">@drawable/spinner_popup_background</item>
+    </style>
+
+</resources>

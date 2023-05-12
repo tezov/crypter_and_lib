@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<!--REMOTE VIEW -->
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    tools:parentTag="android.widget.RelativeLayout">
+
+    <TextView
+        android:id="@+id/lbl_title"
+        style="@style/TextAppearance.Compat.Notification.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        android:paddingStart="6dp"
+        android:paddingTop="6dp"
+        android:textColor="#000000"
+        android:textSize="13sp"
+        tools:text="Title" />
+
+    <TextView
+        android:id="@+id/lbl_progress"
+        style="@style/TextAppearance.Compat.Notification.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/lbl_progress_sep"
+        android:layout_toStartOf="@id/lbl_progress_sep"
+        android:textColor="#000000"
+        android:textSize="13sp"
+        tools:text="1234" />
+
+    <TextView
+        android:id="@+id/lbl_progress_sep"
+        style="@style/TextAppearance.Compat.Notification.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/lbl_progress_max"
+        android:layout_toStartOf="@id/lbl_progress_max"
+        android:paddingStart="4dp"
+        android:paddingEnd="2dp"
+        android:textColor="#000000"
+        android:textSize="13sp"
+        tools:text="/" />
+
+    <TextView
+        android:id="@+id/lbl_progress_max"
+        style="@style/TextAppearance.Compat.Notification.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/lbl_progress_unit"
+        android:layout_toStartOf="@id/lbl_progress_unit"
+        android:gravity="start"
+        android:textColor="#000000"
+        android:textSize="13sp"
+        tools:text="1234" />
+
+    <TextView
+        android:id="@+id/lbl_progress_unit"
+        style="@style/TextAppearance.Compat.Notification.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:paddingStart="2dp"
+        android:paddingEnd="6dp"
+        android:textColor="#000000"
+        android:textSize="13sp"
+        tools:text="unit" />
+
+    <ProgressBar
+        android:id="@+id/bar_progress"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/lbl_title"
+        android:layout_alignParentBottom="true"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp" />
+</merge>

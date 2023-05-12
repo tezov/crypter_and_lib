@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="?android:attr/actionBarSize"
+    android:paddingBottom="?attr/dimBorder_4">
+
+    <com.tezov.lib_java_android.ui.component.plain.FocusCemetery
+        android:layout_width="1px"
+        android:layout_height="1px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.tezov.lib_java_android.ui.layout.TabLayout
+        android:id="@+id/pager_tabs"
+        style="?attr/tabLayoutTheme"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabIndicatorHeight="@dimen/dimBorder_4"
+        app:title_array="@array/uc_tab_title"
+        tools:background="@color/LightBlue" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingStart="?attr/dimBorder_4"
+        android:paddingEnd="?attr/dimBorder_4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pager_tabs"
+        tools:background="@color/LightCyan" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

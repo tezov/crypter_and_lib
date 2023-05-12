@@ -1,0 +1,57 @@
+plugins {
+    id 'com.android.library'
+    id 'com.tezov.application'
+}
+android {
+    compileSdk 32
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 32
+    }
+    sourceSets {
+        main {
+            java {
+                srcDirs 'src/main/java'
+                filter.exclude '**/*TODO*'
+            }
+        }
+    }
+}
+dependencies {
+    api 'org.apache.commons:commons-lang3:3.11' //NumberUtils
+//    api 'org.apache.commons:commons-text:1.9' //StringEscapeUtils
+    api 'com.jakewharton.threetenabp:threetenabp:1.3.0' //LOCAL TIME SUPPORT
+    api 'net.sourceforge.streamsupport:android-retrostreams:1.7.2'
+//    api 'net.sourceforge.streamsupport:android-retroatomic:1.7.3'
+    api 'com.esotericsoftware:kryo:4.0.2' // COPY
+//    api 'com.google.code.gson:gson:2.8.6'
+
+    api 'org.bouncycastle:bcpkix-jdk15to18:1.69'
+//    api 'org.bouncycastle:bcprov-jdk15to18:1.69'
+
+    //MISC
+    implementation 'com.google.zxing:core:3.4.1'
+}
+tezov {
+    configuration {
+        library = true
+        classesToImport = [
+                "com.tezov.lib_java.debug.DebugLog",
+                "com.tezov.lib_java.debug.DebugTrack",
+                "com.tezov.lib_java.debug.DebugException",
+                "com.tezov.lib_java.type.primitive.ObjectTo",
+                "com.tezov.lib_java.type.primitive.IntTo",
+                "com.tezov.lib_java.type.unit.UnitByte",
+                "com.tezov.lib_java.toolbox.CompareType",
+                "com.tezov.lib_java.toolbox.Clock",
+                "com.tezov.lib_java.util.UtilsString",
+                "java.util.List",
+                "java.util.LinkedList",
+                "java.util.Set"
+        ]
+    }
+}

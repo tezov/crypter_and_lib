@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<com.tezov.lib_java_android.ui.layout.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_modal_bg"
+    android:padding="?attr/dimPaddingRoot_3">
+
+    <com.tezov.lib_java_android.ui.component.plain.WebViewHtmlResource
+        android:id="@+id/wbv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/container_btn"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:backgroundTint="@color/LightBlue"
+        tools:layout_height="150dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="?attr/dimPaddingElement_5"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:maxLines="1"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toTopOf="@id/checkbox"
+            app:layout_constraintEnd_toStartOf="@id/btn_confirm"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.40"
+            tools:text="Maybe Later" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_confirm"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:maxLines="1"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toTopOf="@id/checkbox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_cancel"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.40"
+            tools:text="Buy" />
+
+        <com.tezov.lib_java_android.ui.component.plain.CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/styleTextLabelSmall"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:checked="true"
+            tools:text="do not show again" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.tezov.lib_java_android.ui.layout.ConstraintLayout>

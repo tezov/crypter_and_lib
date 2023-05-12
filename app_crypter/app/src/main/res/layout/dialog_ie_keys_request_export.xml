@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <com.tezov.lib_java_android.ui.component.plain.FocusCemetery
+        android:layout_width="1px"
+        android:layout_height="1px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_password_keystore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="?attr/dimPaddingElement_6"
+        android:text="@string/lbl_password_keystore"
+        android:textAppearance="?attr/styleTextNorm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.tezov.lib_java_android.ui.component.plain.EditTextLayout
+        android:id="@+id/frm_password_keystore_layout"
+        style="?attr/textInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="?attr/textInputTheme"
+        app:errorIconDrawable="@null"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_password_keystore"
+        tools:helperText="helper text"
+        tools:hint="password">
+
+        <com.tezov.lib_java_android.ui.form.component.plain.FormEditText
+            android:id="@+id/frm_password_keystore"
+            style="?attr/textInputStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            app:hint_inner="@string/frm_inner_crypt_password"
+            app:hint_outer="@string/frm_outer_crypt_password"
+            app:icon_mode="password" />
+    </com.tezov.lib_java_android.ui.component.plain.EditTextLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_password_exported_keys"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="?attr/dimPaddingElement_6"
+        android:text="@string/lbl_password_exported_keys"
+        android:textAppearance="?attr/styleTextNorm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frm_password_keystore_layout" />
+
+    <com.tezov.lib_java_android.ui.component.plain.EditTextLayout
+        android:id="@+id/frm_password_exported_keys_layout"
+        style="?attr/textInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="?attr/textInputTheme"
+        app:errorIconDrawable="@null"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_password_exported_keys"
+        tools:helperText="helper text"
+        tools:hint="password">
+
+        <com.tezov.lib_java_android.ui.form.component.plain.FormEditText
+            android:id="@+id/frm_password_exported_keys"
+            style="?attr/textInputStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            app:hint_inner="@string/frm_inner_crypt_password"
+            app:hint_outer="@string/frm_outer_crypt_password"
+            app:icon_mode="password" />
+    </com.tezov.lib_java_android.ui.component.plain.EditTextLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/frm_password_exported_keys_layout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_option_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dimPaddingElement_5"
+            android:paddingEnd="@dimen/dimPaddingElement_5">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_option_start"
+                style="@style/Widget.AppCompat.Button.Small"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/option_show_background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/sep_option"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/btn_option_end"
+                app:layout_constraintEnd_toStartOf="@+id/btn_option_end"
+                app:layout_constraintStart_toEndOf="@+id/btn_option_start"
+                app:layout_constraintTop_toTopOf="@+id/btn_option_start">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="4dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dimPaddingElement_2"
+                    android:layout_marginEnd="@dimen/dimPaddingElement_2"
+                    android:layout_weight="1"
+                    android:background="@color/OrangeRed" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_sep_warning"
+                    android:textAppearance="?attr/styleTextLabel" />
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="4dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dimPaddingElement_2"
+                    android:layout_marginEnd="@dimen/dimPaddingElement_2"
+                    android:layout_weight="1"
+                    android:background="@color/OrangeRed" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_option_end"
+                style="@style/Widget.AppCompat.Button.Small"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/option_show_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_option_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="?attr/dimPaddingElement_6"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/container_option_button"
+            tools:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lbl_key_owned_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="?attr/dimPaddingElement_5"
+                android:text="@string/lbl_key_owned"
+                android:textAppearance="?attr/styleTextLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lbl_key_owned_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dimPaddingElement_4"
+                android:textAppearance="?attr/styleTextNorm"
+                app:layout_constraintBaseline_toBaselineOf="@+id/lbl_key_owned_label"
+                app:layout_constraintStart_toEndOf="@+id/lbl_key_owned_label"
+                tools:text="5" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lbl_key_owned_not_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_key_owned_not"
+                android:textAppearance="?attr/styleTextLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_key_owned_label" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lbl_key_owned_not_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dimPaddingElement_4"
+                android:textAppearance="?attr/styleTextNorm"
+                app:layout_constraintBaseline_toBaselineOf="@+id/lbl_key_owned_not_label"
+                app:layout_constraintStart_toEndOf="@+id/lbl_key_owned_not_label"
+                tools:text="5" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lbl_key_owned_not_warning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="?attr/dimPaddingElement_5"
+                android:paddingEnd="?attr/dimPaddingElement_6"
+                android:text="@string/lbl_key_owned_not_warning"
+                android:textAppearance="?attr/styleTextNorm"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_key_owned_not_label" />
+
+            <com.tezov.lib_java_android.ui.layout.FrameLayout
+                android:id="@+id/sep_ownership_warning_bottom"
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:layout_marginTop="?attr/dimPaddingElement_5"
+                android:background="@color/OrangeRed"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_key_owned_not_warning"
+                app:layout_constraintWidth_percent="0.80" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</merge>

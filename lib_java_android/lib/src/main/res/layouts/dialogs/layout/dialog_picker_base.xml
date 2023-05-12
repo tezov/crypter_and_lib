@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialog"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/Transparent"
+    tools:layout_height="match_parent"
+    tools:layout_width="match_parent">
+
+    <!--    Header-->
+    <FrameLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="top"
+        android:layout_marginStart="54dp"
+        android:layout_marginEnd="54dp"
+        android:background="?attr/colorPrimary">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lbl_title"
+            style="?attr/styleTextNorm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingStart="?attr/dimPaddingTabulation_6"
+            android:paddingEnd="?attr/dimPaddingTabulation_6"
+            tools:text="Title" />
+
+    </FrameLayout>
+    <!--    Body-->
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/dialog_body_border"
+        android:padding="4dp"
+        tools:layout_height="match_parent" />
+    <!--    Footer-->
+    <FrameLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="54dp"
+        android:layout_marginEnd="54dp"
+        android:background="?attr/colorPrimary" />
+
+    <!--    TopLeft-->
+    <com.tezov.lib_java_android.ui.dialog.dialogPicker.picker.base.DialogButtonView
+        android:id="@+id/top_left"
+        android:layout_width="54dp"
+        android:layout_height="48dp"
+        app:position="top_left"
+        tools:background="@color/Red"
+        tools:layout_gravity="top|start" />
+    <!--    TopRight-->
+    <com.tezov.lib_java_android.ui.dialog.dialogPicker.picker.base.DialogButtonView
+        android:id="@+id/top_right"
+        android:layout_width="54dp"
+        android:layout_height="48dp"
+        app:position="top_right"
+        tools:background="@color/Red"
+        tools:layout_gravity="top|end" />
+    <!--    BottomLeft-->
+    <com.tezov.lib_java_android.ui.dialog.dialogPicker.picker.base.DialogButtonView
+        android:id="@+id/bottom_left"
+        android:layout_width="54dp"
+        android:layout_height="48dp"
+        app:position="bottom_left"
+        tools:background="@color/Red"
+        tools:layout_gravity="bottom|start" />
+    <!--    BottomRight-->
+    <com.tezov.lib_java_android.ui.dialog.dialogPicker.picker.base.DialogButtonView
+        android:id="@+id/bottom_right"
+        android:layout_width="54dp"
+        android:layout_height="48dp"
+        app:position="bottom_right"
+        tools:background="@color/Red"
+        tools:layout_gravity="bottom|end" />
+    <!--    Option-->
+    <com.tezov.lib_java_android.ui.dialog.dialogPicker.picker.base.DialogButtonViewOption
+        android:id="@+id/option"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:position="option"
+        tools:background="@color/Red"
+        tools:layout_gravity="bottom|center" />
+
+</FrameLayout>

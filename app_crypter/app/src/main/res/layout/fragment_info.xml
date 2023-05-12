@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<com.tezov.lib_java_android.ui.layout.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorFaintDark"
+    android:paddingTop="?android:attr/actionBarSize">
+
+    <com.tezov.lib_java_android.ui.component.plain.WebViewHtmlResource
+        android:id="@+id/wbv_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:raw_file="@raw/how_to_use"
+        app:raw_file_load_on_create="true"
+        tools:backgroundTint="@color/LightBlue" />
+
+</com.tezov.lib_java_android.ui.layout.ConstraintLayout>

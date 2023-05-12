@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="24dp"
+    android:viewportWidth="48"
+    android:viewportHeight="24">
+    <group android:name="icon">
+        <path
+            android:pathData="M 6 16 L 42 16 L 24 4 Z M 0 20 L 48 20"
+            android:strokeWidth="2"
+            android:strokeColor="@color/Black" />
+    </group>
+</vector>
+
+

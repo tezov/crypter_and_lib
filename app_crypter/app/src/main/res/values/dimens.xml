@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *********************************************************************************
+  ~ Created by Tezov under MIT LICENCE.
+  ~ For any request, please send me an email to tezov.app@gmail.com.
+  ~ I'll be glad to answer you if your request is sane :)
+  ~ *********************************************************************************
+  -->
+
+<resources>
+    <dimen name="stp_width">8dp</dimen>
+    <dimen name="btn_crypt_file_width">0.45</dimen>
+    <dimen name="btn_size_min_txt">12sp</dimen>
+    <dimen name="btn_size_max_txt">24sp</dimen>
+    <dimen name="lbl_size_max_txt_banner_default">18sp</dimen>
+    <dimen name="lbl_size_max_txt_toolbar_default">24sp</dimen>
+
+</resources>
