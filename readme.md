@@ -1,21 +1,25 @@
-#Tezov project
+# Tezov project
 
 You'll find here the source of the application Crypter + Lib.
+
+
 https://play.google.com/store/apps/details?id=com.tezov.crypter.rse&hl=en&gl=US
 
-All of this code are in Java. theses sources won't be updated anymore since right now I working to refactor most of it in Kotlin / Compose.
+
+All of this code are in Java. theses sources won't be updated anymore since right now I working to refactor most of it in Kotlin / Compose (with a full decoupling and depency injection throw multi-modules too)
 
 
-Even if I won't update them, I'll be glad to have any feedback and gladly answer to any request. I'll public share the new lib refactored in Kotlin and Compose.
+Even if I won't update them, I'll be glad to have any feedback and gladly answer to any request. I'll public share the new lib refactored in Kotlin and Compose soon.
 
 
-Keep in ming, that's all of this was made for learning purpose. Everything is not a waste, but there are lot of improvment possible. Mainly about decoupling (i will not do it here, but you'll find it in Kotlin version)
+Keep in mind, that's all of this was made for learning purpose but still in very robust way. Everything is not a waste, but there are lot of improvment possible. Mainly about decoupling that's make all this code impossible to pass through testing.
 
 
-Sadly, there is absolutly no documentation and absolutly no comment. But if interrested, I'll could make some sample and explain you how to use it. But mainly, you gonna have to explore yourself to understand
+Sadly, there is absolutly no documentation and absolutly no comment. But if interrested, I'll could make some sample and explain you how to use it. But mainly, you gonna have to explore yourself to understand.
 
 
 Crypter is not focus on the UI but on the functionnal part. Don't too hard :)
+
 
 ## What you will find ?
 - Application single activity multi-fragment.
@@ -26,14 +30,14 @@ Crypter is not focus on the UI but on the functionnal part. Don't too hard :)
 Everything not link to android. These are 100% java and are fully fonctionnal on JEE project
 
 What stuff interresting inside:
-- cipher folder -> everything you need to user friendly create keys aes/rsa/..., cypher, decypher and so on
+- cipher folder -> everything you need to user friendly create keys aes/rsa/..., cypher, decypher and so on through a single interface for all possible encryption Android support.
 - async -> my own version of rxJava. More simple but very versatile and extensible.
 - debug -> custom debug tool make it possible to even debug in release or obsfucated code with the help of my gradle plugin
-- file -> every thing you need to user friendly manage files from API21 to API 31 with a single interface
+- file -> every thing you need to user friendly manage files from API21 to API31 with a single interface and manage link in independant platform way.
 - parser -> everything you need to user friendly parse XML/JSON/XLS and custom (plain or cypher) format with a single interface
 - socker -> everything you need to send/receive packet over TCP/UDP server/client, auto beacon and so on
 - buffer -> everything you need to work a byte/nible level with the easyness of C++
-- All other are class to make all this functionnel
+- All other are class to make all this functionnal
 
 Sadly most of these tool are coupled.
  
