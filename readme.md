@@ -1,4 +1,4 @@
-# Tezov project
+# Tezov project (Old Java)
 
 ## English introduction
 You'll find here the sources of the application Crypter + Lib.
