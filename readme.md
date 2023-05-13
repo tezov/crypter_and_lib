@@ -10,7 +10,7 @@ https://play.google.com/store/apps/details?id=com.tezov.crypter.rse&hl=en&gl=US
 All of thes sources are in Java. It won't be updated anymore since right now I working to refactor most of it in Kotlin / Compose (with a full decoupling and depency injection throw multi-modules too)
 
 
-Even if I won't update them, I'll be glad to have any feedback and gladly answer to any request. I'll public share the new lib refactored in Kotlin and Compose soon.
+Even if I won't update them, I'll be glad to have any feedback and gladly answer to any request. Here the public source of the new project [link](https://github.com/tezov/bank)
 
 
 Keep in mind, that's all of this was made for learning purpose but still in very robust way. Everything is not a waste, but there are lot of improvment possible. Mainly about decoupling that's make all this code impossible to pass through testing.
