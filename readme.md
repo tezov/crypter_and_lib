@@ -37,7 +37,7 @@ les choses interessantes et trés faciliement portable en kotlin:
 - le package async : ma solution RxJava multi-thread
 - le package database : mon propre DAO avec gestion de synchro local/remote. Trés ancienne, donc je dirai qu'il y a beaucoup de mauvais choix technique sur cette partie. Mais toujours sympas pour apprendre.
 - Tous le package UI qui contient les wrapper des quasiments toutes les vue Android permettant entre autre d'être 100% robuste au évolution API. (Beaucoup de mauvais choix ici, mais trés fonctionnel
-- Dans le package UI, vous traverez aussi ma propre implementation Navigation. A ce demandé si Google ne m'a pas copié en douce :). Permettant d'enregistrer son graph de navigation Activité/Fragment/Dialog avec gestion d'animation et transfert de donnée.
+- Dans le package UI, vous traverez aussi ma propre implementation Navigation. A ce demander si Google ne m'a pas copié en douce :). Permettant d'enregistrer son graph de navigation Activité/Fragment/Dialog avec gestion d'animation et transfert de donnée.
 - Dans le package Application, vous trouverez plein d'outils utils pour s'affranchir des difficultés du SDK d'android concernant la connectivity, les permissions, la déctection d'ouverture claver et poussage de vue de l'API21 jusqu'au 31.
 - Dans le package file, vous trouverez un truc absolument fabuleux. La gestion de fichiers sur la méme interface de l'API21 à 31 et avec génération de liens fichiers indépendant de la plateform. Permettant nottement l'enregistrement du path de fichier en étant insensible à la plateform.
 - Et plein de truc encore dont je me souviens plus.
