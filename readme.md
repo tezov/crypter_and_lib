@@ -87,7 +87,7 @@ Sadly most of these tool are coupled.
   ## plugin TezovApp
   Gradle plugin is groovy to mange the release / debug clean and add a user friendly versionning gestion.
  
-##How to install
+## How to install
 - Download all the folder (app_crypter / lib_java / lib_java_android / pluginTezov).
 - Open the app_crypter folder with android studio
 - sync and build.
