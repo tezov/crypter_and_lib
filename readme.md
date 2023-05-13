@@ -60,6 +60,12 @@ Sadly most of these tool are coupled.
    - a big part focus and user data acquired and data presenter (not easy to use but very powerfull to make form)
    - and so on. I thing the ui part is very big and not easy to use. Look the app to understand.
  
+  ## Module app_crypter
+  The crypter application using these 2 modules.
+  
+  ## plugin TezovApp
+  Gradle plugin is groovy to mange the release / debug clean and add a user friendly versionning gestion.
+ 
 ##How to install
 - Download all the folder (app_crypter / lib_java / lib_java_android / pluginTezov).
 - Open the app_crypter folder with android studio
