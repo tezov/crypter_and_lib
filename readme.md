@@ -15,32 +15,33 @@ Even if I won't update them, I'll be glad to have any feedback and gladly answer
 Keep in mind, that's all of this was made for learning purpose but still in very robust way. Everything is not a waste, but there are lot of improvment possible. Mainly about decoupling that's make all this code impossible to pass through testing.
 
 
-Sadly, there is absolutly no documentation and absolutly no comment. But if interrested, I'll could make some sample and explain you how to use it. But mainly, you gonna have to explore yourself to understand.
+Sadly, there is absolutly no documentation and absolutly no comment. But if interrested, I'll could make some sample and explain you how to use it. Mainly, you gonna have to explore yourself to understand.
 
 
-Crypter is not focus on the UI but on the functionnal part. Don't too hard :)
+Crypter is not focus on the UI but on the functionnal part. Don't be too harsh :)
 
 
 ## What you will find ?
-- Application single activity multi-fragment.
-- Application in 3 modules + plugin userfriendly setup
+- Single activity multi-fragment.
+- 3 modules custom architecture + plugin userfriendly setup
+- 100% reactive through my ownRxJava like which I call Notifier.
 
 
 ## Module lib_java
 Everything not link to android. These are 100% java and are fully fonctionnal on JEE project
 
 What stuff interresting inside:
-- cipher folder -> everything you need to user friendly create keys aes/rsa/..., cypher, decypher and so on through a single interface for all possible encryption Android support.
+- cipher folder -> everything you need to user friendly create keys aes/rsa/..., cypher, decypher and so on through a single interface for all possible encryption Android support and any type adpater.
 - async -> my own version of rxJava. More simple but very versatile and extensible.
-- debug -> custom debug tool make it possible to even debug in release or obsfucated code with the help of my gradle plugin
+- debug -> custom debug tool make it possible to even debug in release or obsfucated code.
 - file -> every thing you need to user friendly manage files from API21 to API31 with a single interface and manage link in independant platform way.
 - parser -> everything you need to user friendly parse XML/JSON/XLS and custom (plain or cypher) format with a single interface
 - socker -> everything you need to send/receive packet over TCP/UDP server/client, auto beacon and so on
 - buffer -> everything you need to work a byte/nible level with the easyness of C++
+- type/runnable -> A very powerfull tool to build a coroutine flow like with the same functionality before the coroutine even exist.
 - All other are class to make all this functionnal
 
 Sadly most of these tool are coupled.
- 
  
  ## Module lib_java_android
  Everything link to android SDK but not link to the application
@@ -58,7 +59,6 @@ Sadly most of these tool are coupled.
    - in this, you find my own navigation / navigator implementation fully extensible
    - a big part focus and user data acquired and data presenter (not easy to use but very powerfull to make form)
    - and so on. I thing the ui part is very big and not easy to use. Look the app to understand.
- - type/runnable -> A very powerfull tool to build a coroutine flow like with the same functionality before the coroutine even exist.
  
 ##How to install
 - Download all the folder (app_crypter / lib_java / lib_java_android / pluginTezov).
